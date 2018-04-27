@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Human Learnings
 categories: Méta
 tags: 
