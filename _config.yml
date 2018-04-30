@@ -1,1 +1,13 @@
 theme: jekyll-theme-minimal
+
+name: Yvan Razafindramanana
+
+avatar: https://avatars1.githubusercontent.com/u/19163871?s=460&v=4
+
+footer-links:
+  twitter: yvan_luc
+  
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
