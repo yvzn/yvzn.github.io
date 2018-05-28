@@ -17,8 +17,8 @@ title: Human Learning(s)
 author: Yvan Razafindramanana
 email: mail@ludeo.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog technique de Yvan Razafindramanana, lead tech ES / .NET / Java,
-  apprenti pythoniste / data scientist / machine learning engineer.
+  Blog technique de Yvan Razafindramanana, lead tech,
+  apprenti data scientist.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yr424
