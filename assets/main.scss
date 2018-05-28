@@ -1,0 +1,130 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+/* https://coolors.co/ef6461-e4b363-2f4858-fbfbfb-201a23 */
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre');
+
+:root {
+	--space-4x: 30px;
+	--space-2x: 15px;
+	--space-1x: 7px;
+
+	--body-color: #2f4858;
+	--accent-1-color: #e4b363;
+	
+	--large-title-size: 2rem;
+	--medium-title-size: 1.5rem;
+	--small-title-size: 1.5rem;
+}
+
+body {
+    font-family: 'Proza Libre', sans-serif;
+	font-size: 1rem;
+	margin: 0;
+	background-color: #fbfbfb;
+	color: var(--body-color);
+}
+.wrapper {
+	margin: auto;
+	padding: var(--space-4x);
+	max-width: 40em;
+	background-color: #fff;
+}
+.page-content {
+    padding: 0
+}
+.site-footer {
+    padding: 0;
+    border-top: none;
+}
+
+
+h1, h2, h3, h4, h5, h6, .site-title, .site-nav {
+    font-family: 'Cormorant Garamond', serif;
+	margin-top: 0;
+	line-height: .8;
+}
+h2 {
+	font-size: var(--large-title-size);
+	margin-bottom: var(--space-2x);
+}
+h3 {
+	font-size: var(--medium-title-size);
+	margin-bottom: var(--space-2x);
+}
+p {
+	margin-top: 0;
+	margin-bottom: var(--space-1x);
+}
+a, a:visited {
+	color: #51a3a3;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #ef6461;
+}
+
+
+h1.site-title {
+	margin-bottom: 0;
+	font-size: var(--medium-title-size);
+}
+p.site-title {
+	font-size: var(--small-title-size);
+	font-weight: bold;
+}
+.site-title a {
+	color: #201a23;
+}
+.site-header {
+	border-top: solid 6px var(--accent-1-color);
+    border-bottom: none;
+}
+.site-header p {
+	margin: 0;
+}
+
+
+.post-list li, article {
+	margin: 0 0 var(--space-4x) 0;
+}
+.post-title, .post-title a, .post-list h3, .post-list h3 a {
+	font-size: var(--large-title-size);
+	margin-bottom: var(--space-2x);
+	color: var(--accent-1-color);
+}
+.post-meta, .post-footer {
+    font-size: .7rem;
+	text-transform: uppercase;
+}
+.post-meta {
+	margin-bottom: var(--space-2x);
+}
+.post-content,
+.post-summary {
+	margin: 0 0 var(--space-2x) 0;
+}
+.post-content p:last-of-type,
+.post-summary p:last-of-type {
+	margin: 0;
+}
+.post-footer span+span:before {
+	content: ' | ';
+}
+
+
+@media only screen and (min-width: 768px) {
+	:root {
+		--space-4x: 50px;
+		--space-2x: 25px;
+		--space-1x: 12px;
+			
+		--large-title-size: 3rem;
+		--medium-title-size: 2rem;
+		--small-title-size: 1.5rem;
+	}
+}
