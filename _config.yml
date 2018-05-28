@@ -22,7 +22,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yr424
-github_username:  yvzn
+github_username: yvzn
 
 # Build settings
 markdown: kramdown
@@ -46,3 +46,6 @@ exclude:
   
 minima:
   date_format: "%-d %b %Y"
+
+show_excerpts: true
+excerpt_separator: <!--more-->
