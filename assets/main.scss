@@ -13,6 +13,7 @@
 	--space-2x: 15px;
 	--space-1x: 7px;
 
+    --back-color: #fbfbfb;
 	--body-color: #2f4858;
 	--accent-1-color: #e4b363;
 	
@@ -25,7 +26,7 @@ body {
     font-family: 'Proza Libre', sans-serif;
 	font-size: 1rem;
 	margin: 0;
-	background-color: #fbfbfb;
+	background-color: var(--back-color);
 	color: var(--body-color);
 }
 .wrapper {
@@ -81,11 +82,15 @@ p.site-title {
 	color: #201a23;
 }
 .site-header {
-	border-top: solid 6px var(--accent-1-color);
-    border-bottom: none;
-}
-.site-header p {
-	margin: 0;
+    border: none;
+    
+    .wrapper {
+    	border-top: solid 6px var(--accent-1-color);
+    }
+
+    p {
+        margin: 0;
+    }
 }
 
 
@@ -96,6 +101,7 @@ p.site-title {
 	font-size: var(--large-title-size);
 	margin-bottom: var(--space-2x);
 	color: var(--accent-1-color);
+    text-decoration: none;
 }
 .post-meta, .post-footer {
     font-size: .7rem;
@@ -116,6 +122,13 @@ p.site-title {
 	content: ' | ';
 }
 
+
+.highlighter-rouge .highlight {
+    background-color: var(--back-color)
+}
+pre, code, kbd {
+    background-color: var(--back-color)
+}
 
 @media only screen and (min-width: 768px) {
 	:root {

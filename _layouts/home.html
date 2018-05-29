@@ -23,6 +23,9 @@ layout: default
         </h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
+          <p><a href="{{ post.url | relative_url }}">
+            Suite de l'article...
+          </a></p>
         {%- endif -%}
       </li>
       {%- endfor -%}
