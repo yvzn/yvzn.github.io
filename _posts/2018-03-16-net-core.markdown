@@ -17,7 +17,7 @@ Article initialement posté sur le blog [SofteamOuest](https://softeamouest.gith
 
 Quelques technos utilisées:
 
-* [.NET Core](https://www.microsoft.com/net/learn/in-browser-tutorial/1) (ASP.NET MVC)
+* [.NET Core 2.0](https://www.microsoft.com/net/learn/in-browser-tutorial/1) (ASP.NET MVC)
 * Docker / Kubernetes / Jenkins pipeline
 * Swashbuckle pour l'intégration Swagger
 * Moq pour les tests unitaires
@@ -148,20 +148,18 @@ C'est ce qui est d'ailleurs conseillé dans
 [les tutoriels Docker](https://docs.docker.com/engine/examples/dotnetcore/#create-a-dockerfile-for-an-aspnet-core-application) 
 et [Microsoft](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
-Malheureusement cette solution _multistage build_
+Malheureusement cette solution appelée _multistage build_
 nécessite une version de Docker
-assez récente, non possible sur notre plateforme.
+assez récente, non possible sur notre plateforme (mars 2018).
 Nous allons donc utiliser les deux images mais séparément,
-grâce aux facilités proposées par notre Jenkins pipeline...
+grâce aux facilités proposées par le Jenkins pipeline,
+de la manière suivante:
 
 # Déploiement sur le cluster
 
-L'image `dotnet:sdk` est utilisée localement sur la plateforme
-d'intégration pour construire les binaires.
-Le [Dockerfile](https://github.com/SofteamOuest/wallboard-back/blob/master/Dockerfile)
-utilise alors uniquement l'image `dotnet:runtime` et
-récupère les binaires générés précédemment dans l'environnement
-de travail de Jenkins.
+L'image `dotnet:sdk` est donc utilisée localement sur la plateforme
+d'intégration pour construire les binaires dans le répertoire
+`out` de l'environnement de travail de Jenkins
 
 ```groovy
 ...
@@ -171,12 +169,20 @@ container('dotnet') {
     sh 'dotnet publish -c Release -o out'
 }
 ...
-container('docker') {
-    docker build .
-}
-...
 ```
 [source de cet exemple](https://github.com/SofteamOuest/wallboard-back/blob/master/Jenkinsfile)
+
+Le Dockerfile
+utilise alors uniquement l'image `dotnet:runtime` et
+récupère les binaires générés précédemment.
+
+```docker
+FROM microsoft/dotnet:runtime
+...
+COPY ./WallboardBack/out ./
+...
+```
+[source de cet exemple](https://github.com/SofteamOuest/wallboard-back/blob/master/Dockerfile)
 
 Une fois l'image Docker créee, elle est publiée sur le Nexus.
 Le déploiement sur le clusteur peut alors être réalisé
@@ -200,5 +206,3 @@ Le framework
 est suffisament bien documenté, sauf lorsqu'on veut faire des
 choses un peu plus inhabituelles, et là il faut vraiment chercher...
 
-Prochainement, je souhaite remplacer la base mémoire
-par MongoDB et ajouter plus de tests avec Specflow.

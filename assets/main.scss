@@ -113,13 +113,19 @@ p.site-title {
 .post-content,
 .post-summary {
 	margin: 0 0 var(--space-2x) 0;
-}
-.post-content p:last-of-type,
-.post-summary p:last-of-type {
-	margin: 0;
-}
-.post-footer span+span:before {
-	content: ' | ';
+    
+    p {
+        line-height: 1.8rem;
+    
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--accent-1-color);
+        line-height: 1;
+    }
 }
 
 
