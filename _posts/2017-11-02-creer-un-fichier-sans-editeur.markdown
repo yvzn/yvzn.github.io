@@ -3,6 +3,7 @@ title: "Créer un fichier sans éditeur"
 date: 2017-11-02 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
+license: CC-BY-SA-4.0
 ---
 
 <acronym>TL;DR</acronym> Pour créer un nouveau fichier <em>exemple.txt</em> sous bash :

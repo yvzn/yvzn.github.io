@@ -3,6 +3,7 @@ title: Retour sur Devoxx 2017
 date: 2017-10-25 00:00:00 Z
 layout: post
 author: Yvan Razafindramanana
+license: CC-BY-SA-4.0
 ---
 
 Je n'ai pas assisté à l'évènement, mais merci internet, ci-après voici une petite sélection personnelle de conférences.

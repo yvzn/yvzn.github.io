@@ -3,6 +3,7 @@ title: Devfest Nantes 2017
 date: 2017-11-15 00:00:00 Z
 layout: post
 author: Yvan Razafindramanana
+license: CC-BY-SA-4.0
 ---
 
 <acronym>TL;DR</acronym> Voici les conférences que j'ai vues (et appréciées) lors de cette édition. Celles que j'ai préféré : <a href="https://youtu.be/96iIQuhTzsc">Historique d'Android</a> et <a href="https://youtu.be/T6YJlaY0Dpw">Documentation as code</a>, des conférences pas hyper techniques mais bien présentées et avec du contenu. Le reste ci-après.
