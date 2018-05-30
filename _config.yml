@@ -36,7 +36,7 @@ theme: minima
 # to override the default setting.
 exclude:
   - LICENSE
-  - README.md
+  - CONTENT-LICENSE
   - Gemfile
   - Gemfile.lock
   - node_modules
