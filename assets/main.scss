@@ -6,16 +6,21 @@
 
 /* https://coolors.co/ef6461-e4b363-2f4858-fbfbfb-201a23 */
 
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Proza+Libre');
+/* https://coolors.co/fbfbfb-d62839-120309-175676-094074 */
 
 :root {
 	--space-4x: 30px;
 	--space-2x: 15px;
 	--space-1x: 7px;
 
-    --back-color: #fbfbfb;
-	--body-color: #2f4858;
-	--accent-1-color: #e4b363;
+    --back-color: #175676;
+	--text-color: #120309;
+	--headings-color: #094074;
+    --links-color: #175676;
+    --active-links-color: #d62839;
+    --meta-color: #d62839;
+    --footer-color: #52474c;
+    --highlight-color: #fbfbfb;
 	
 	--large-title-size: 2rem;
 	--medium-title-size: 1.5rem;
@@ -27,7 +32,7 @@ body {
 	font-size: 1rem;
 	margin: 0;
 	background-color: var(--back-color);
-	color: var(--body-color);
+	color: var(--text-color);
 }
 .wrapper {
 	margin: auto;
@@ -38,11 +43,14 @@ body {
 .page-content {
     padding: 0
 }
+
 .site-footer {
     padding: 0;
     border-top: none;
 }
-
+.footer-col-wrapper {
+    color: var(--footer-color);
+}
 
 h1, h2, h3, h4, h5, h6, .site-title, .site-nav {
     font-family: 'Cormorant Garamond', serif;
@@ -62,11 +70,11 @@ p {
 	margin-bottom: var(--space-1x);
 }
 a, a:visited {
-	color: #51a3a3;
-	text-decoration: none;
+	color: var(--links-color);
+	text-decoration: underline;
 }
 a:hover, a:active {
-	color: #ef6461;
+	color: var(--active-links-color);
 }
 
 
@@ -85,7 +93,7 @@ p.site-title {
     border: none;
     
     .wrapper {
-    	border-top: solid 6px var(--accent-1-color);
+    	border-top: solid 6px var(--meta-color);
     }
 
     p {
@@ -100,12 +108,13 @@ p.site-title {
 .post-title, .post-title a, .post-list h3, .post-list h3 a {
 	font-size: var(--large-title-size);
 	margin-bottom: var(--space-2x);
-	color: var(--accent-1-color);
+	color: var(--headings-color);
     text-decoration: none;
 }
 .post-meta, .post-footer {
     font-size: .7rem;
 	text-transform: uppercase;
+    color: var(--meta-color);
 }
 .post-meta {
 	margin-bottom: var(--space-2x);
@@ -122,18 +131,22 @@ p.site-title {
         }
     }
     
+    h1 {
+        font-size: var(--large-title-size);
+    }
+    
     h1, h2, h3, h4, h5, h6 {
-        color: var(--accent-1-color);
+        color: var(--headings-color);
         line-height: 1;
     }
 }
 
 
 .highlighter-rouge .highlight {
-    background-color: var(--back-color)
+    background-color: var(--highlight-color)
 }
 pre, code, kbd {
-    background-color: var(--back-color)
+    background-color: var(--highlight-color)
 }
 
 @media only screen and (min-width: 768px) {
