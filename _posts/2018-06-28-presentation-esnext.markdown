@@ -8,7 +8,7 @@ license: CC-BY-SA-4.0
 
 Le mois dernier j'ai réalisé une présentation rapide des nouveautés d'ECMAScript.
 
-<!-- more -->
+<!--more-->
 
 La vidéo de la présentation est disponible sur [Youtube](https://www.youtube.com/watch?v=9CYiyT2XD0o)
 et les slides sont sur [Github](https://github.com/yvzn/bbl-ecmascript).
