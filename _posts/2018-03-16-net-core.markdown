@@ -72,11 +72,11 @@ un simple éditeur ou (mieux) VSCode: on trouve
 pas mal d'aides et de plugins.
 A la longue, un IDE plus intégré se justifie plus facilement,
 pour les outils de refactoring et de génération de code
-automatique qu'il fournit.
+automatique.
 
 J'ai donc installé Visual Studio Community Edition
-(gratuit, sous conditions) Le top c'est le Rider de
-JetBrains, si vous arrivez à négocier une licence 🤑.
+(gratuit, sous conditions) Vous pouvez également essayer 
+Rider de JetBrains, si vous arrivez à négocier une licence 🤑.
 
 ## Activation de CORS
 
@@ -101,7 +101,7 @@ servir Swagger dans un
 sous-répertoire de mon domaine, par exemple sous `exemple.com/back/swagger.json`.
 Je n'ai pu configurer Swashbuckle que 
 directement à la racine `exemple.com/swagger.json`. Il faudrait
-creuser le souci 🤔.
+creuser 🤔.
 
 # Dockerisation
 
