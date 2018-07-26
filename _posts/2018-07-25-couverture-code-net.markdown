@@ -6,8 +6,8 @@ author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-<acronym>TL;DR</acronym> Avec les outils (AltCover)[https://github.com/SteveGilham/altcover]
-et (ReportGenerator)[https://danielpalme.github.io/ReportGenerator/]
+<acronym>TL;DR</acronym> Avec les outils [AltCover](https://github.com/SteveGilham/altcover)
+et [ReportGenerator](https://danielpalme.github.io/ReportGenerator/)
 il est relativement facile de générer des statistiques au format HTML sur la couverture de
 votre code .Net par les tests unitaires.
 
@@ -15,11 +15,12 @@ votre code .Net par les tests unitaires.
 dotnet test /p:AltCover=true
 ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
-
 <!--more-->
 
 Article inspiré par l'excellent 
-(Scott Hanselman)[https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx]
+[Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx)
+
+## Principe
 
 La couverture de code est une mesure intéressante (mais pas infaillible) pour analyser comment
 votre code est effectivement testé unitairement. Elle indique
@@ -38,7 +39,7 @@ open source.
 
 ## AltCover
 
-(AltCover)[https://github.com/SteveGilham/altcover] va d'abord 
+[AltCover](https://github.com/SteveGilham/altcover) va d'abord 
 lancer vos tests unitaires, les analyser et produire un ficher
 de couverture de code ```coverage.xml```.
 
@@ -63,7 +64,7 @@ peut être lancé avec ```dotnet test```.
 
 Le fichier généré par AltCover est un fichier XML au format OpenCover.
 Diffilement lisible par un être humain, il peut être transformé en pages HTML
-par (ReportGenerator)[https://danielpalme.github.io/ReportGenerator/].
+par [ReportGenerator](https://danielpalme.github.io/ReportGenerator/).
 
 On peut installer cet outil, également avec NuGet :
 
