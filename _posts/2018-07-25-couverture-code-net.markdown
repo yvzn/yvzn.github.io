@@ -46,7 +46,7 @@ de couverture de code ```coverage.xml```.
 On peut installer cet outil dans son projet de tests avec NuGet :
 
 ```powershell
-cd <<MonProjet.Tests>>
+cd [...]\MonProjet.Tests
 
 dotnet add package AltCover
 ```
@@ -84,7 +84,7 @@ Get-ChildItem $env:USERPROFILE\.nuget\packages\reportgenerator -Recurse -File `
 Enfin lancer la génération du rapport HTML :
 
 ```powershell
-c:\<<...>>ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
+c:\[...]\ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
 
 Le rapport est alors accessible dans ```./coverage/index.htm```.
