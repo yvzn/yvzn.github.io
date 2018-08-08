@@ -55,7 +55,7 @@ body {
 h1, h2, h3, h4, h5, h6, .site-title, .site-nav {
     font-family: 'Cormorant Garamond', serif;
 	margin-top: 0;
-	line-height: .8;
+	line-height: 1;
 }
 h2 {
 	font-size: var(--large-title-size);
@@ -102,9 +102,17 @@ p.site-title {
 }
 
 
-.post-list li, article {
-	margin: 0 0 var(--space-4x) 0;
+.post-list {
+    li, article {
+        margin: 0 0 var(--space-4x) 0;
+    }
+    
+    p {
+        line-height: 1.8rem;
+    }
 }
+
+
 .post-title, .post-title a, .post-list h3, .post-list h3 a {
 	font-size: var(--large-title-size);
 	margin-bottom: var(--space-2x);
@@ -135,12 +143,22 @@ p.site-title {
         font-size: var(--large-title-size);
     }
     
+    h2 {
+        font-size: var(--medium-title-size);
+    }
+    
     h1, h2, h3, h4, h5, h6 {
         color: var(--headings-color);
         line-height: 1;
+        margin-top: var(--space-4x);
     }
 }
 
+
+.social-media-list {
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 .highlighter-rouge .highlight {
     background-color: var(--highlight-color)

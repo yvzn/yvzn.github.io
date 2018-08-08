@@ -24,6 +24,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.ludeo.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yr424
 github_username: yvzn
+linkedin_username: yvanrazafindramanana
 
 # Build settings
 markdown: kramdown
