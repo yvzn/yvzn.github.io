@@ -37,7 +37,7 @@ Heureusement la communauté fournit des initiatives ouvertes permettant d'obteni
 frais. Voici une solution, parmi les multiples options disponibles, utilisant une combinaison de deux outils
 open source.
 
-## AltCover
+## Analyser avec AltCover 
 
 [AltCover](https://github.com/SteveGilham/altcover) va d'abord 
 lancer vos tests unitaires, les analyser et produire un ficher
@@ -60,7 +60,7 @@ dotnet test /p:AltCover=true
 Le framework de tests unitaires utilisé importe peu, tant qu'il
 peut être lancé avec ```dotnet test```.
 
-## ReportGenerator
+## Un rapport ReportGenerator
 
 Le fichier généré par AltCover est un fichier XML au format OpenCover.
 Diffilement lisible par un être humain, il peut être transformé en pages HTML

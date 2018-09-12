@@ -5,4 +5,4 @@ layout: post
 author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
-En réalité, je suis plutôt un développeur lamba qui sait simplement bien chercher sur Google 👨🏽‍💻. Alors je me suis dit : pourquoi ne pas partager ce que je trouve ?
+En réalité, un bon développeur sait bien chercher sur Google 👨🏽‍💻. Alors je me suis dit : pourquoi ne pas partager ce que je trouve ?
