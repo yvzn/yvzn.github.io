@@ -8,7 +8,7 @@ license: CC-BY-SA-4.0
 
 Je viens de terminer le mooc "[Machine Learning](https://fr.coursera.org/learn/machine-learning)" enseigné par Andrew Ng sur Coursera. Ce cours va au delà des traditionnelles initiations au machine learning, en expliquant de manière plus formelle quelques uns des algorithmes existants. Il enseigne surtout une vraie méthodologie, dont les principes sont appliquables à un plus grand nombre de projets, permettant de choisir, paramétrer, évaluer et généraliser des modèles et leurs prédictions.
 
-<!-- more -->
+<!--more-->
 
 Il faut admettre que le cours utilise un formalisme mathématique assez détaillé. Cependant la plupart des formules expriment des choses simples, que le professeur Andrew Ng sait parfaitement traduire en langage de tous les jours. Quant aux concepts plus complexes, utilisant les dérivées partielles ou l'algèbre linéaire, le cours permet d'appréhender l'idée sous-jacente, sans besoin de comprendre le détail exact de la formulation. Cela étant dit, si on est totalement réfractaire à la vue d'une double somme ou d'un logarithme, ce mooc n'est peut-être pas le plus adapté.
 
