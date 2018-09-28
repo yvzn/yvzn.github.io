@@ -83,7 +83,7 @@ Savoir tout reconstruire de zéro : parfois on a besoin de se planter sur un pre
 
 Il n'existe pas de solution unique et définitive, ce n'est pas parce qu'une technologie est pertinente à un moment donné qu'il faut la réutiliser systématiquement et pour toujours. Et par conséquent il faut éviter les "company stack", ces piles logicielles définies une fois pour toutes pour l'ensemble d'une organisation, qui empêchent toute liberté de choix.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5dY3zJNB3xI)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5dY3zJNB3xI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Gérer son temps
 
@@ -97,7 +97,7 @@ Les progrès dans ce domaine sont lents et les machines sont encore loin de nous
 
 En revanche elles peuvent effectivement déjà nous libérer de certaines actions, pour nous libérer du temps, pour apprendre à apprendre, pour se développer, pour progresser dans des domaines qu'elles ne pourront peut-être jamais effleurer. Contrairement au film d'Eric Besson, c'est là qu'est le "vrai" potentiel du temps de cerveau qu'on n'utilise pas.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LkuUm6ZplAA)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LkuUm6ZplAA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Conclusion
 
