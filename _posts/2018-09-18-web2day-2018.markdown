@@ -10,6 +10,8 @@ Le web2day ce sont des conférences techniques, mais ce sont surtout des présen
 
 Ce serait tellement long de résumer l'ensemble des sujets abordés. Pour cette année, j'ai choisi d'orienter mon compte-rendu autour du thème "Quelles compétences pour travailler dans un monde en constante évolution".
 
+<!--more-->
+
 # Softskills
 
 C'est justement le titre de la première conférence sur laquelle je souhaite faire un retour: ["Quelles compétences pour travailler dans un monde digital en constante évolution"](https://www.youtube.com/watch?v=hzTWmtshfwQ), présentée par Céline BOISSON (de Google) et Jérôme HOARAU.
