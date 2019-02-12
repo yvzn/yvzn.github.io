@@ -78,7 +78,8 @@ ReportGenerator.exe, caché quelque part dans votre répertoires de packages NuG
 ```powershell
 Get-ChildItem $env:USERPROFILE\.nuget\packages\reportgenerator -Recurse -File `
 	| Where-Object { $_.Name -eq "ReportGenerator.exe" } `
-	| ForEach-Object { $_.FullName }
+	| Sort-Object -Descending { $_.LastWriteTime } `
+	| Select-Object -First 1 { $_.FullName }
 ```
 
 Enfin lancer la génération du rapport HTML :
@@ -97,7 +98,8 @@ Voici un script Powershell pour automatiser ces étapes
 ```powershell
 $reportgenerator = Get-ChildItem $env:USERPROFILE\.nuget\packages\reportgenerator -Recurse -File `
 	| Where-Object { $_.Name -eq "ReportGenerator.exe" } `
-	| ForEach-Object { $_.FullName }
+	| Sort-Object -Descending { $_.LastWriteTime } `
+	| Select-Object -First 1 { $_.FullName }
 
 dotnet test /p:AltCover=true /p:AltCoverXmlreport="./coverage/coverage.xml"
 
