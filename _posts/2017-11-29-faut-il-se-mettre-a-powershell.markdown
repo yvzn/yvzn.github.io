@@ -6,7 +6,7 @@ author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-<acronym>TL;DR</acronym> Oui, si vous voulez travailler plus rapidement et n'avez pas la possibilité (ou l'envie) d'installer Windows 10 ou un émulateur bash, ou bien si vous administrez des machines Windows plus "anciennes". Ou bien si vous aimez pouvoir vous en sortir un minimum dans n'importe quelle situation. Non si vous connaissez déjà bash et avez déjà un bash disponible.
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Oui, si vous voulez travailler plus rapidement et n'avez pas la possibilité (ou l'envie) d'installer Windows 10 ou un émulateur bash, ou bien si vous administrez des machines Windows plus "anciennes". Ou bien si vous aimez pouvoir vous en sortir un minimum dans n'importe quelle situation. Non si vous connaissez déjà bash et avez déjà un bash disponible.
 
 <!--more-->
 

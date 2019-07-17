@@ -6,7 +6,7 @@ author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-<acronym title="Too long; Didn't Read">TL;DR</acronym> Adopter une architecture orientée micro-services, a fortiori dans une approche conteneurs ou serverless, c'est accepter que les échanges entre composants ne se passent pas toujours bien – et donc mettre en place les mécanismes adéquats pour éviter une perte d'informations ou fonctionner en mode dégradé.
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Adopter une architecture orientée micro-services, a fortiori dans une approche conteneurs ou serverless, c'est accepter que les échanges entre composants ne se passent pas toujours bien – et donc mettre en place les mécanismes adéquats pour éviter une perte d'informations ou fonctionner en mode dégradé.
 
 La librairie open-source [Polly](https://github.com/App-vNext/Polly) permet d'adresser un de ces problèmes de communication : la gestion des erreurs lors d'appels HTTP à des services distants. Que faire en cas d'erreur, faut-il rejouer l'appel ? Combien de fois ? Que retourner à la méthode appelante ?
 
