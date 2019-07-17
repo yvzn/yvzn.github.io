@@ -10,7 +10,7 @@ Dans cette présentation, je décris comment
 les Azure Functions permettent de déployer rapidement du code métier
 réagissant à des événements dans le cloud Azure. 
 
-<!-- more -->
+<!--more-->
 
 Le framework est très 
 dirigiste, ce qui permet une prise en main facilitée et un code 
