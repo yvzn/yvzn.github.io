@@ -22,3 +22,6 @@ Le talk est illustré avec différents cas d'utilisation rencontrés
 lors de la mise en place d'une application serverless pour un client.
 
 La vidéo de la présentation est disponible sur [Youtube](https://www.youtube.com/watch?v=qcq7Y_gkfHU). Vous pouvez consulter les slides sur [Github pages](https://yvzn.github.io/bbl-azure-serverless?showNotes=true) et l'intégralité du code source sur [Github](https://github.com/yvzn/bbl-azure-serverless).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qcq7Y_gkfHU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+

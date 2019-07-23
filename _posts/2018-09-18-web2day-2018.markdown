@@ -69,6 +69,8 @@ En n'oubiant pas que le risque est indissosciablement lié à un sentiment de s�
 
 ![Courageous Penguin](/assets/ian-parker-546256-unsplash.jpg)
 
+...
+
 Dans sa conférence ["Recast.Ai"](https://www.youtube.com/watch?v=x8a6Bs-OHog), la fondatrice Jasmine ANTEUNIS revient sur la succès story de sa startup de chatbots / traitement du langage naturel, récemment rachetée par le géant SAP.
 
 Elle évoque une heuristique intéressante pour la prise de décision : décider vite, à chaque fois, même en cas d'hésitation. Dans le pire des cas, si on se trompe et qu'on a pris le mauvais choix, on s'en rend compte plus rapidement et on peut changer son fusil d'épaule plus tôt. Evidemment, si on a pris la bonne décision, c'est tout gagné.
@@ -76,6 +78,8 @@ Elle évoque une heuristique intéressante pour la prise de décision : décider
 Bien sûr, cette politique n'est applicable que dans un cadre où l'erreur, l'échec sont dédramatisés et positivement acceptés.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x8a6Bs-OHog" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+...
 
 Dans sa conférence ["How bookkeepers fucked up IT"](https://www.youtube.com/watch?v=5dY3zJNB3xI), Quentin ADAM revient lui sur plusieurs décisions qu'il faut savoir prendre, qui s'imposent parfois d'elles-mêmes une fois qu'on admet s'être trompé.
 

@@ -19,3 +19,6 @@ avec l'option pour lire les diapositives depuis un fichier Markdown
 
 La présentation contenait beaucoup de live coding, que j'ai réalisé avec l'ardoise ECMAScript de Firefox.
 C'était une première pour moi (le live coding) donc il y a quelques coquilles, soyez indulgents 😅
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9CYiyT2XD0o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
