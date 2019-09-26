@@ -53,5 +53,28 @@ Autre exemple, trouver le premier fichier `*.html` et de l'ouvrir avec
 l'application associée :
 
 ```powershell
-Get-ChildItem -Recurse -File -Filter *.html | ForEach-Object { start $_; break }
+Get-ChildItem -Recurse -File -Filter *.html | ForEach-Object { Start-Process $_; break }
+```
+
+Pour réutiliser ces commandes ultérieurement, un raccourci peut être ajouté
+dans le profil Powershell. Pour éditer son profil (par exemple avec VS Code) :
+
+```powershell
+code $PROFILE
+```
+
+Pour ajouter dans le fichier une fonction personnalisée:
+
+```powershell
+function Find-And-Set-Location
+{
+    Param($folder)
+    Get-ChildItem -Recurse -Directory -Filter $folder | ForEach-Object { Set-Location $_.FullName; break }    
+}
+```
+
+Et enfin définir un alias vers cette fonction, plus simple à saisir:
+
+```powershell
+New-Alias ccd Find-And-Set-Location
 ```
