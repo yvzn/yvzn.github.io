@@ -1,5 +1,5 @@
 ---
-title: "Lancer une commande dans une nouvelle fênetre avec Powershell"
+title: "Lancer une commande dans une nouvelle fenêtre avec Powershell"
 date: 2019-09-26 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
