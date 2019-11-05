@@ -6,12 +6,13 @@ author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-`Start-Process "cmd.exe" "/C ..."` permet d'ouvrir une nouvelle console
-et d'y lancer automatiquement une commande depuis Powershell.
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> `Start-Process "cmd.exe" "/C ..."` 
+permet d'ouvrir une nouvelle console
+dans une fenêtre à part et d'y lancer automatiquement une commande depuis Powershell.
 
 <!--more-->
 
-Certains exécutables ou certains programmes, lorsqu'ils sont lancés depuis
+Certains exécutables ou programmes, lorsqu'ils sont lancés depuis
 la ligne de commande Powershell, ne rendent pas immédiatement la main. Le
 seul moyen de revenir à l'invite est donc de terminer le programme,
 ou bien d'ouvrir manuellement une nouvelle console via le menu démarrer.
@@ -22,7 +23,7 @@ saisir une nouvelle instruction.
 
 Il existe plusieurs solutions pour contourner ce problème. L'une d'entre
 elles consiste à lancer le programme, non pas directement dans la console
-en cours, mais dans une nouvelle console qu'on va démarrer automatiquement
+en cours, mais dans une nouvelle fenêtre qu'on va démarrer automatiquement
 pour héberger le programme.
 
 Ceci peut être effectué à l'aide de `Start-Process`:
@@ -32,10 +33,11 @@ Start-Process "cmd.exe" "/C npm run start"
 ```
 
 Powershell rend alors directement la main et le programme est lancé dans
-une nouvelle fenêtre indépendante de la première.
+une fenêtre indépendante de la première.
 
 Notez que cette nouvelle fenêtre est démarrée via `cmd.exe` mais
-on peut tout à fait la lancer via Powershell lui-même.
+on peut tout à fait la lancer via une autre instance de
+Powershell lui-même.
 
 ```powershell
 Start-Process "pwsh.exe" "-c npm run start"

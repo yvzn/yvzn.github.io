@@ -1,12 +1,14 @@
 ---
-title: "Ma présentation sur ES.Next"
+title: "Les nouveautés de ES6 à ES2018"
 date: 2018-06-28 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-Le mois dernier j'ai réalisé une présentation des nouveautés d'ECMAScript.
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Cette présentation vidéo
+reprend les principales nouveautés d'ECMAScript, depuis Javascript 1.5 jusqu'à ES2018,
+avec des exemples concrets et des cas d'utilisations possibles.
 
 <!--more-->
 

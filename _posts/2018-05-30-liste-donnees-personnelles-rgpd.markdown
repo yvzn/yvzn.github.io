@@ -6,14 +6,15 @@ author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-[L'article 4 du RGPD](https://gdpr.algolia.com/fr/gdpr-article-4) définit
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> [L'article 4 du RGPD](https://gdpr.algolia.com/fr/gdpr-article-4) définit
 les données à caractère personnel comme "toute information se rapportant à une _personne
 physique_ identifiée ou identifiable".
 
 Cette définition est assez vaste et peut couvrir énormément d'aspects.
-Il n'existe pas vraiment de liste exhaustive : il convient
+Il n'existe pas vraiment de liste officielle et exhaustive : il convient
 donc d'avoir une approche prudente lors de la mise en place
-de traitements concernant les données des individus.
+de traitements concernant les données des individus. Voici
+néanmoins une tentative d'énumération...
 
 <!--more-->
 
