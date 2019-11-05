@@ -6,14 +6,14 @@ permalink: /about/
 
 # Human Learning(s)
 
-Ce site utilise le logiciel open source [Jekyll](https://jekyllrb.com/) 
+Ce blog utilise le logiciel open source [Jekyll](https://jekyllrb.com/) 
 avec le thème [minima](https://github.com/jekyll/minima)
 et est hébergé sur Github Pages.
 
-Pour lancer le site en local, vous aurez besoin de Ruby et de Jekyll
-(cf. lien ci-dessus)
+Pour lancer le site en local après avoir cloné le dépôt git, vous aurez besoin de Ruby et de [Jekyll](https://jekyllrb.com/) (toutes les instructions d'installation sont dans ce lien)
 
 ```bash
+git clone https://github.com/yvzn/yvzn.github.io.git
 bundle exec jekyll serve
 ```
 
