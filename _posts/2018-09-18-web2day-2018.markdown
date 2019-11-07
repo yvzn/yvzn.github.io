@@ -1,5 +1,5 @@
 ---
-title: "Retour sur le Web2day 2018"
+title: "Web2day 2018"
 date: 2018-09-18 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana

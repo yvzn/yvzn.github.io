@@ -1,5 +1,5 @@
 ---
-title: "Les nouveautés de ES6 à ES2018"
+title: "Les nouveautés ECMAScript (ES6 → ES2018)"
 date: 2018-06-28 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
