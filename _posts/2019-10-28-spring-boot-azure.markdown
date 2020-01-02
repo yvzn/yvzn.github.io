@@ -7,21 +7,21 @@ license: CC-BY-SA-4.0
 ---
 
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> La ressource
-de type _Application Web_ (ou _App Service_) permet de déployer rapidement
-une application Java Spring Boot dans le cloud Microsoft. Dans ce premier article, 
-je décris comment créer et configurer une telle ressource.
+de type _Application Web_ (ou _App Service_) avec le runtime _Linux_ et _Java SE_ 
+permet de déployer rapidement une application Java Spring Boot dans le cloud Microsoft.
+Dans ce premier article, je décris comment créer et configurer une telle ressource.
 
 <!--more-->
 
 # L'application
 
-Comme exemple, j'ai choisi <a href="https://recyclette.azurewebsites.net/">La Recyclette</a>,
+Comme exemple, j'ai choisi [La Recyclette](https://recyclette.azurewebsites.net/),
 mon application utilisant la reconnaissance visuelle et la webcam du navigateur pour déterminer
 si un déchet peut être recyclé.
 
 C'est une application Spring Boot 2 assez _classique_, avec le moteur de template `Thymeleaf`
 et une base de données en mémoire `HSQLDB`. Le code source est disponible sur 
-<a href="https://github.com/yvzn/recikligi/">github.com</a>.
+[github.com](https://github.com/yvzn/recikligi/).
 
 # Créer l'hébergement sur Azure
 
@@ -29,7 +29,8 @@ Pour accueillir l'application, nous devons créer une ressource dans le portail 
 _Application Web_ (ou _App Service_ en anglais, ou encore _Web App_). Ce service permet d'héberger
 du code programmé dans une variété de langages et de frameworks, dont Java, pour un prix raisonnable.
 
-Pour le reste de l'article, je suppose que vous êtes connectés au portail Azure et que vous
+Pour le reste de l'article, je suppose que vous êtes connectés au [portail Azure](https://portal.azure.com/)
+et que vous
 avez une souscription (un abonnement) valide. L'abonnement gratuit ou l'abonnement d'essai suffisent.
 
 En haut à droite du portail, sélectionner _+ Nouvelle Ressource_ et rechercher _Application Web_.
