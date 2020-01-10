@@ -14,7 +14,7 @@ aussi par le code.
 
 <!--more-->
 
-# L'application
+# Déployer avec Azure Devops
 
 Comme exemple, j'ai choisi [La Recyclette](https://recyclette.azurewebsites.net/),
 mon application Spring Boot utilisant la webcam du navigateur pour déterminer
@@ -24,17 +24,15 @@ Dans un premier article, je décris comment [créer et
 configurer l'infrastructure Azure](/2019/10/27/spring-boot-azure) nécessaire au
 déploiement de cette application (ressource de type _Application Web_).
 
-# Déployer avec Azure Devops
-
-Il s'agit donc de compiler et de packager cette application puis de la déployer dans la
+Il s'agit maintenant  de compiler et de packager cette application puis de la déployer dans la
 resource Azure préalablement configurée.
 
 Pour le reste de l'article, je suppose que vous êtes connectés a [Azure Devops](https://dev.azure.com) et que vous
 avez un abonnement valide. L'abonnement gratuit (limité à 5 utilisateurs) suffit.
 
-## Créer un pipeline Azure Devops
+# Créer un pipeline Azure Devops
 
-Il faut commencer par créer un nouveau _projet_ dans Azure Devops. Cette notion 
+Il faut commencer par créer un nouveau _projet_ dans Azure Devops. Un _projet_  
 regroupe l'ensemble des services permettant la réalisation et le déploiement
 d'une application web. Nous allons uniquement utiliser le service _pipelines_ mais
 les autres services ont également leurs qualités et mériteraient une présentation
@@ -48,11 +46,11 @@ cas le code source est disponible sur [github.com](https://github.com/yvzn/recik
 il faut associer son compte Github à Azure devops. Cette opération nécessite de se
 connecter à Github et de fournir les autorisations nécessaires.
 
-## Configuration manuelle ou par fichier
+# Configuration par fichier
 
 Azure devops requiert un droit d'écriture dans le repository. Cela peut sembler
 intrusif, mais donne en réalité l'opportunité de sauvegarder la configuration
-de déploiement dans un fichier `yaml`, versionné au même endroit que votre code.
+de déploiement dans un fichier `yaml`, directement versionné au même endroit que votre code.
 Les intérêts sont multiples: répéter le déploiement, le faire évoluer en même temps
 que votre architecture, etc.
 
@@ -61,37 +59,71 @@ tooltips, l'expérience est vraiment moderne, mais vous pouvez bien sûr choisir
 l'option d'une configuration plus classique (via des écrans et des formulaires) 
 en cliquant sur le lien _Classic editor_ en bas de page.
 
-Nous pouvons commencer avec le _Starter pipeline_ qui va initialiser un fichier `yaml`
-et afficher un éditeur de texte permettant de le compléter au fur et à mesure. 
-Le contenu par défaut du fichier est l'équivalent d'un _hello world_.
-Nous pouvons supprimer ce qu'il contient à l'exception des sections
-`trigger` et `pool`. `trigger` définit la branche à observer pour déclencher le build en continu, 
-`pool` paramètre l'ensemble d'ordinateurs (agents) utilisés pour le build.
+Nous pouvons commencer avec le _Starter pipeline_, qui va initialiser un fichier `yaml`
+et afficher un éditeur de texte permettant de le compléter. 
 
-## Build
+Il contient trois sections `trigger` et `pool` et `steps`. `trigger` définit la branche à observer pour déclencher le build en continu, 
+`pool` paramètre l'ensemble d'ordinateurs (agents) utilisés pour le build et enfin `steps` définit les tâches du build en lui même.
 
-L'étape suivante est de packager notre application. L'assistant de conception
-`yaml` est disponible à l'aide du bouton _Show assistant_ sur la droite de l'éditeur.
+Le contenu par défaut du fichier est l'équivalent d'un _hello world_. On peut commencer par supprimer les tâches factices (après `steps`) insérées par défaut.
+
+# Build
+
+L'étape suivante est de packager notre application. Il faut donc indiquer à Azure Devops l'ensemble des actions nécessaires pour créer ce package. Ces actions vont prendre la forme de tâches, décrites dans le fichier `yaml`  par un type, une description et des paramètres.
+
+Un assistant de conception `yaml`, permettant de faciliter le renseignement de ces informations, est disponible à l'aide du bouton _Show assistant_ sur la droite de l'éditeur.
 
 Puisqu'il s'agit d'une application Spring Boot construite avec Maven, rechercher
-`maven` dans l'assistant, paramétrer les différentes options (chemin vers le `pom.xml`, etc.)
+_maven_ dans l'assistant, paramétrer les différentes options (chemin vers le `pom.xml`, etc.)
 et cliquer sur Add.
 
 Attention le contenu `yaml` va être inséré à l'endroit où le curseur est positionné dans
 l'éditeur, il faut donc bien s'assurer que ce dernier est la fin du fichier avant
 de cliquer sur Add, sinon le code ne sera plus valide.
 
-Créer le pipeline gitops (build + déploiement)
+```yaml
+- task: Maven@3
+    displayName: 'Maven Package'
+    inputs:
+    mavenPomFile: 'pom.xml'
+```
 
-# Paramétrer 
+# Copier les fichiers
 
-Définir les variables d'environnement
+Si tout se passe bien, à cette étape Maven a en théorie généré une archive `jar` dans le dossier `target` de l'environnement de travail.
 
-# Automatiser
+La seconde étape consiste à copier cette archive dans un second répertoire, le répertoire de staging. En effet, l'environnement de travail contient de nombreux fichiers intermédiaire (`.class`, `.obj`, etc.) qui n'ont pas d'intérêt à être déployés. Il faut donc récupérer uniquement l'archive qui nous intéresse. Ceci peut être fait avec la tache `CopyFiles` (à rechercher dans l'assistant)
 
-Templates ARM
-Groupe de ressources : Exporter le modèle
+```yaml
+- task: CopyFiles@2
+    displayName: 'Copy Files to artifact staging directory'
+    inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    Contents: '**/target/*.?(war|jar)'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+``` 
 
-Pulumi
+# Déployer
+
+La dernière étape consiste à déployer l'archive dans la resource Azure de type _Application Web_.
+
+Ceci peut être fait avec la tache `AzureWebApp`. Il faut spécifier l'identifiant de la souscription (l'abonnement) Azure dans laquelle déployer, ainsi que le nom de l'application, qui correspond au nom de l'instance applicative crée précédemment.
+
+```yaml
+- task: AzureWebApp@1
+displayName: 'Azure Web App Deploy'
+inputs:
+    azureSubscription: ...
+    appType: webAppLinux
+    appName: ...
+    package: '$(Build.ArtifactStagingDirectory)/**/target/*.?(war|jar)'
+```
 
 # Conclusion
+
+Ces quelques étapes simples permettent de construire et de déployer une application Spring Boot dans Azure. La configuration choisie permet de déclencher ce déploiement automatiquement à chaque commit sur master.
+
+Pour mieux organiser les différentes tâches, elles peuvent être regroupées en deux sous parties (des `stages`) une pour le build et une pour le déploiement. Des variables de build ont également été ajoutées pour simplifier la maintenance. Mais le principe reste identique.
+
+Un exemple de [fichier de configuration complet](https://github.com/yvzn/recikligi/blob/master/azure-pipelines.yml) et disponible sur Github. 
+
