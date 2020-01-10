@@ -23,16 +23,16 @@ si un déchet peut être recyclé.
 Dans un premier article, je décris comment [créer et
 configurer l'infrastructure Azure](/2019/10/27/spring-boot-azure) nécessaire au
 déploiement de cette application (ressource de type _Application Web_).
+Il s'agit maintenant  de compiler et de packager cette application puis de la
+déployer dans la resource Azure préalablement configurée.
 
-Il s'agit maintenant  de compiler et de packager cette application puis de la déployer dans la
-resource Azure préalablement configurée.
-
-Pour le reste de l'article, je suppose que vous êtes connectés a [Azure Devops](https://dev.azure.com) et que vous
-avez un abonnement valide. L'abonnement gratuit (limité à 5 utilisateurs) suffit.
+Pour le reste de l'article, je suppose que vous êtes connectés a
+[Azure Devops](https://dev.azure.com) et que vous avez un abonnement valide.
+L'abonnement gratuit (limité à 5 utilisateurs) suffit.
 
 # Créer un pipeline Azure Devops
 
-Il faut commencer par créer un nouveau _projet_ dans Azure Devops. Un _projet_  
+Il faut commencer par créer un nouveau _projet_ dans Azure Devops. Un _projet_
 regroupe l'ensemble des services permettant la réalisation et le déploiement
 d'une application web. Nous allons uniquement utiliser le service _pipelines_ mais
 les autres services ont également leurs qualités et mériteraient une présentation
@@ -62,16 +62,21 @@ en cliquant sur le lien _Classic editor_ en bas de page.
 Nous pouvons commencer avec le _Starter pipeline_, qui va initialiser un fichier `yaml`
 et afficher un éditeur de texte permettant de le compléter. 
 
-Il contient trois sections `trigger` et `pool` et `steps`. `trigger` définit la branche à observer pour déclencher le build en continu, 
-`pool` paramètre l'ensemble d'ordinateurs (agents) utilisés pour le build et enfin `steps` définit les tâches du build en lui même.
+Il contient trois sections `trigger` et `pool` et `steps`. `trigger` définit la branche
+à observer pour déclencher le build en continu, `pool` paramètre l'ensemble d'ordinateurs
+(agents) utilisés pour le build et enfin `steps` définit les tâches du build en lui même.
 
-Le contenu par défaut du fichier est l'équivalent d'un _hello world_. On peut commencer par supprimer les tâches factices (après `steps`) insérées par défaut.
+Le contenu par défaut du fichier est l'équivalent d'un _hello world_. On peut
+commencer par supprimer les tâches factices (après `steps`) insérées par défaut.
 
 # Build
 
-L'étape suivante est de packager notre application. Il faut donc indiquer à Azure Devops l'ensemble des actions nécessaires pour créer ce package. Ces actions vont prendre la forme de tâches, décrites dans le fichier `yaml`  par un type, une description et des paramètres.
+L'étape suivante est de packager notre application. Il faut donc indiquer à Azure Devops
+l'ensemble des actions nécessaires pour créer ce package. Ces actions vont prendre la
+forme de tâches, décrites dans le fichier `yaml`  par un type, une description et des paramètres.
 
-Un assistant de conception `yaml`, permettant de faciliter le renseignement de ces informations, est disponible à l'aide du bouton _Show assistant_ sur la droite de l'éditeur.
+Un assistant de conception `yaml`, permettant de faciliter le renseignement de ces
+informations, est disponible à l'aide du bouton _Show assistant_ sur la droite de l'éditeur.
 
 Puisqu'il s'agit d'une application Spring Boot construite avec Maven, rechercher
 _maven_ dans l'assistant, paramétrer les différentes options (chemin vers le `pom.xml`, etc.)
@@ -90,9 +95,14 @@ de cliquer sur Add, sinon le code ne sera plus valide.
 
 # Copier les fichiers
 
-Si tout se passe bien, à cette étape Maven a en théorie généré une archive `jar` dans le dossier `target` de l'environnement de travail.
+Si tout se passe bien, à cette étape Maven a en théorie généré une archive `jar` dans le
+dossier `target` de l'environnement de travail.
 
-La seconde étape consiste à copier cette archive dans un second répertoire, le répertoire de staging. En effet, l'environnement de travail contient de nombreux fichiers intermédiaire (`.class`, `.obj`, etc.) qui n'ont pas d'intérêt à être déployés. Il faut donc récupérer uniquement l'archive qui nous intéresse. Ceci peut être fait avec la tache `CopyFiles` (à rechercher dans l'assistant)
+La seconde étape consiste à copier cette archive dans un second répertoire, le répertoire
+de staging. En effet, l'environnement de travail contient de nombreux fichiers intermédiaire
+(`.class`, `.obj`, etc.) qui n'ont pas d'intérêt à être déployés. Il faut donc récupérer
+uniquement l'archive qui nous intéresse. Ceci peut être fait avec la tache `CopyFiles`
+(à rechercher dans l'assistant)
 
 ```yaml
 - task: CopyFiles@2
@@ -107,7 +117,9 @@ La seconde étape consiste à copier cette archive dans un second répertoire, l
 
 La dernière étape consiste à déployer l'archive dans la resource Azure de type _Application Web_.
 
-Ceci peut être fait avec la tache `AzureWebApp`. Il faut spécifier l'identifiant de la souscription (l'abonnement) Azure dans laquelle déployer, ainsi que le nom de l'application, qui correspond au nom de l'instance applicative crée précédemment.
+Ceci peut être fait avec la tache `AzureWebApp`. Il faut spécifier l'identifiant de
+la souscription (l'abonnement) Azure dans laquelle déployer, ainsi que le nom de
+l'application, qui correspond au nom de l'instance applicative crée précédemment.
 
 ```yaml
 - task: AzureWebApp@1
@@ -121,9 +133,15 @@ inputs:
 
 # Conclusion
 
-Ces quelques étapes simples permettent de construire et de déployer une application Spring Boot dans Azure. La configuration choisie permet de déclencher ce déploiement automatiquement à chaque commit sur master.
+Ces quelques étapes simples permettent de construire et de déployer une application
+Spring Boot dans Azure. La configuration choisie permet de déclencher ce déploiement
+automatiquement à chaque commit sur master.
 
-Pour mieux organiser les différentes tâches, elles peuvent être regroupées en deux sous parties (des `stages`) une pour le build et une pour le déploiement. Des variables de build ont également été ajoutées pour simplifier la maintenance. Mais le principe reste identique.
+Pour mieux organiser les différentes tâches, elles peuvent être regroupées en deux
+sous parties (des `stages`) une pour le build et une pour le déploiement. Des
+variables de build ont également été ajoutées pour simplifier la maintenance.
+Mais le principe reste identique.
 
-Un exemple de [fichier de configuration complet](https://github.com/yvzn/recikligi/blob/master/azure-pipelines.yml) et disponible sur Github. 
+Un exemple de [fichier de configuration complet](https://github.com/yvzn/recikligi/blob/master/azure-pipelines.yml)
+est disponible sur Github. 
 
