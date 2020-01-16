@@ -70,7 +70,7 @@ en cours (c'est à dire à la console ouverte) ce qui évitera de conserver
 indéfiniment l'information ou de la partager avec d'autres consoles.
 
 ```powershell
-&lsqb;Environment&rsqb;::SetEnvironmentVariable("HTTP_PROXY", "http://user:password@proxy.acme.local:8080", &lsqb;EnvironmentVariableTarget&rsqb;::Process)
+[Environment] ::SetEnvironmentVariable("HTTP_PROXY", "http://user:password@proxy.acme.local:8080", [EnvironmentVariableTarget]::Process)
 ```
 
 Enfin, une fois la configuration effectuée, avec `Remove-Variable` 
@@ -84,8 +84,8 @@ $my_proxy_port = "8080"
 $my_credentials = Get-Credential
 $my_proxy_string = "http://$($credentials.UserName):$($credentials.GetNetworkCredential().password)@${my_proxy_host}:${my_proxy_port}"
 
-&lsqb;Environment&rsqb;::SetEnvironmentVariable("HTTP_PROXY", $my_proxy_string, &lsqb;EnvironmentVariableTarget&rsqb;::Process)
-&lsqb;Environment&rsqb;::SetEnvironmentVariable("HTTPS_PROXY", $my_proxy_string, &lsqb;EnvironmentVariableTarget&rsqb;::Process)
+[Environment] ::SetEnvironmentVariable("HTTP_PROXY", $my_proxy_string, [EnvironmentVariableTarget]::Process)
+[Environment] ::SetEnvironmentVariable("HTTPS_PROXY", $my_proxy_string, [EnvironmentVariableTarget]::Process)
 
 Remove-Variable my_proxy_host
 Remove-Variable my_proxy_port
