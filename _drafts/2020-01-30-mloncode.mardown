@@ -1,0 +1,79 @@
+
+Machine Learning sur du code source
+
+Lancer des algorithmes de machine learning sur son code source permet 
+d'extraire des informations sur la structure des projets et d'améliorer
+l'outillage de développement. Ce sont les méthodes inspirées du 
+traitement automatique du langage naturel qui semblent donner les 
+premiers résultats. Des briques open-source comme 
+[Gitbase](https://github.com/src-d/gitbase) ou 
+[Babelfish](https://doc.bblf.sh/) permettent de faciliter les étapes
+de collection et d'analyse de la donnée.
+
+<!--more-->
+
+Cet article est le compte-rendu d'un codelab très instructif, 
+organisé par Alex Bezzubov et Hugo Mougard de chez 
+[_source{d}_](https://sourced.tech/) lors du DevFest Nantes 2019.
+
+En guise d'introduction, vous pouvez consulter le 
+[code source du codelab](https://github.com/mloncode/devfest2019-workshop)
+ainsi que les 
+[slides de la présentation](https://docs.google.com/presentation/d/1vF0JMagmXXzn-h-OaJu6CsDt78oSQSg58YFJsBUaHxk/edit). D'autres collaborateurs de _source{d}_ ont également proposé un
+[talk en anglais sur le sujet](https://www.youtube.com/watch?v=6NhQIaJfWXk)
+ainsi que [les slides associés](https://egorbu.github.io/usedata_2019/).
+
+J'ai enfin réalisé une présentation pour débriefer le codelab avec 
+mes collègues. Malheureusement la qualité de capture vidéo n'est pas au 
+rendez-vous, mais vous pouvez néanmoins la 
+[visualiser sur Youtube](https://www.youtube.com/watch?v=0R7GIT4GPNk).
+
+# Objectifs
+
+Le _MLonCode_ (Machine Learning on source code) est un domaine assez récent 
+(2-3 ans) mais pour lequel l'intérêt est croissant, avec beaucoup de publications
+des grands acteurs de l'infomatique (Microsoft, Google, Facebook)
+et de plus en plus conférences sur le sujet.
+
+Le principe de lancer des algorithmes de machine learning sur du code source
+a plusieurs applications intéressantes. Par exemple comprendre l'organisation de
+son code,extraire des métriques évoluées et identifier des patterns ou 
+des anti-patterns (code commun, répétitions...) .
+
+Autre exemple, améliorer l'outillage, les environnements de développement,
+les outils de compilation ou de déploiement. Cette approche est actuellement 
+mise en oeuvre par Microsoft avec _IntelliCode_, dont la promesse est de fournir une
+meilleure auto-complétion, contextualisée en fonction du projet et des habitudes
+des développeurs, de faire des propositions de refactoring plus pertinentes, etc.
+
+# Approches
+
+Plusieurs approches sont possibles pour aborder ce sujet. Celle proposée
+par le codelab considère que la formulation du code source _imite_ 
+le langage naturel (ou <acronym title="Langage Naturel">LN</acronym>). 
+C'est un _a priori_ assez fort, mais qui a du sens vu la manière dont le
+code est écrit.
+
+En effet, les identifiants de variables et de méthodes sont 
+généralement choisis de manière à décrire de façon fluide le comportement
+attendu et, de même, les mots clés logiques (`if...then`, `for`, etc.) sont
+assemblés de manière à ce que le code soit lisible, quasiment comme du texte.
+
+En considérant le code source comme un ensemble de mots, 
+cette approche a l'avantage de pouvoir réappliquer tous les
+patterns statistiques et modèles de machine learning
+déja appliqués en traitement automatique du langage naturel (<acronym 
+title="Traitement Automatique du Langage Naturel">TALN</acronym> 
+ou <acronym title="Natural Language Processing">NLP</acronym>). Elle a aussi ses
+limites, dans la mesure où elle tient compte que des mots présents dans le code,
+sans prendre en compte toute la structure sous-jacente ()
+
+# Etapes
+
+# Collecter la donnée
+Gitbase
+
+# Analyser la donnée
+Babelfish
+
+# Créer le modèle
