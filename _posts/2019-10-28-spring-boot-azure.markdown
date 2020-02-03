@@ -7,9 +7,12 @@ license: CC-BY-SA-4.0
 ---
 
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> La ressource
-de type _Application Web_ (ou _App Service_) avec le runtime _Linux_ et _Java SE_ 
-permet de déployer rapidement une application Java Spring Boot dans le cloud Microsoft.
-Dans ce premier article, je décris comment créer et configurer une telle ressource.
+de type _Application Web_ (ou _App Service_) permet de déployer rapidement
+une application Java Spring Boot dans le cloud Microsoft. La pile de runtime
+_Linux_ et _Java SE_ est celle qui convient pour ce cas d'utilisation.
+Pour l'environnement de développement, un plan tarifaire gratuit ou basique
+est suffisant. Dans ce premier article,  je décris comment créer et configurer une
+telle ressource.
 
 <!--more-->
 

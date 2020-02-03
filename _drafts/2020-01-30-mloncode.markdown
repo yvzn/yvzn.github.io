@@ -1,6 +1,14 @@
 
-Machine Learning sur du code source
 
+---
+title: "Machine Learning sur du code source"
+date: 2020-01-30 00:00:00 +001
+layout: post
+author: Yvan Razafindramanana
+license: CC-BY-SA-4.0
+---
+
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> 
 Lancer des algorithmes de machine learning sur son code source permet 
 d'extraire des informations sur la structure des projets et d'améliorer
 l'outillage de développement. Ce sont les méthodes inspirées du 
@@ -15,7 +23,6 @@ de collection et d'analyse de la donnée.
 Cet article est le compte-rendu d'un codelab très instructif, 
 organisé par Alex Bezzubov et Hugo Mougard de chez 
 [_source{d}_](https://sourced.tech/) lors du DevFest Nantes 2019.
-
 En guise d'introduction, vous pouvez consulter le 
 [code source du codelab](https://github.com/mloncode/devfest2019-workshop)
 ainsi que les 
@@ -48,27 +55,45 @@ des développeurs, de faire des propositions de refactoring plus pertinentes, et
 
 # Approches
 
-Plusieurs approches sont possibles pour aborder ce sujet. Celle proposée
+Plusieurs approches sont possibles pour aborder le sujet. Celle proposée
 par le codelab considère que la formulation du code source _imite_ 
 le langage naturel (ou <acronym title="Langage Naturel">LN</acronym>). 
 C'est un _a priori_ assez fort, mais qui a du sens vu la manière dont le
 code est écrit.
 
 En effet, les identifiants de variables et de méthodes sont 
-généralement choisis de manière à décrire de façon fluide le comportement
-attendu et, de même, les mots clés logiques (`if...then`, `for`, etc.) sont
-assemblés de manière à ce que le code soit lisible, quasiment comme du texte.
+généralement choisis de manière à décrire de façon fluide le
+comportement attendu. De même, les mots clés logiques (`if...then`,
+`for`, etc.) permettent de structurer le code afin qu'il soit lisible, 
+quasiment comme une suite logique de phrases _naturelles_.
 
 En considérant le code source comme un ensemble de mots, 
 cette approche a l'avantage de pouvoir réappliquer tous les
 patterns statistiques et modèles de machine learning
-déja appliqués en traitement automatique du langage naturel (<acronym 
-title="Traitement Automatique du Langage Naturel">TALN</acronym> 
-ou <acronym title="Natural Language Processing">NLP</acronym>). Elle a aussi ses
-limites, dans la mesure où elle tient compte que des mots présents dans le code,
-sans prendre en compte toute la structure sous-jacente ()
+déja mis en oeuvre en traitement automatique du langage naturel
+(<acronym  title="Traitement Automatique du Langage Naturel">TALN</acronym> 
+ou en anglais <acronym title="Natural Language Processing">NLP</acronym>).
+Elle a aussi ses limites, dans la mesure où elle tient compte que
+des mots eux-mêmes, sans tirer profit de toute la structure
+sous-jacente, (méthodes, branchements, regroupements logiques, ...),
+qui est malgré tout une part importante de l'information portée par
+le code.
 
 # Etapes
+
+Le codelab propose judicieusement de reprendre un sommaire calqué sur les étapes traditionnellement mises en oeuvre dans les projets de _data science_:
+
+1. Définir le problème
+2. Collecter la donnée
+3. Analyser la donnée
+4. Evaluer les résultats
+5. Communiquer
+
+Ce sont des tâches classiques qui, réalisées dans cet ordre, ont d'aborder chacun des éléments liés à la conception et à la validation d'un projet.
+
+Les travaux pratiques du codelab consistaient à travailler autour de deux sujets, plutôt accessibles en théorie:
+- Détecter dans une codebase les projets similaires (afin par exemple de les regrouper par thème: sécurité, gestion de données, interfaces, ...)
+- Suggérer algorithmiquement le nom d'une méthode à partir de son corps (son cotenu)
 
 # Collecter la donnée
 Gitbase
