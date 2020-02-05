@@ -1,5 +1,3 @@
-
-
 ---
 title: "Machine Learning sur du code source"
 date: 2020-01-30 00:00:00 +001
@@ -8,80 +6,33 @@ author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
 ---
 
-<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> 
-Lancer des algorithmes de machine learning sur son code source permet 
-d'extraire des informations sur la structure des projets et d'améliorer
-l'outillage de développement. Ce sont les méthodes inspirées du 
-traitement automatique du langage naturel qui semblent donner les 
-premiers résultats. Des briques open-source comme 
-[Gitbase](https://github.com/src-d/gitbase) ou 
-[Babelfish](https://doc.bblf.sh/) permettent de faciliter les étapes
-de collection et d'analyse de la donnée.
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Lancer des algorithmes de machine learning sur son code source permet  d'extraire des informations sur la structure des projets et d'améliorer l'outillage de développement. Ce sont les méthodes inspirées du  traitement automatique du langage naturel qui semblent donner les  premiers résultats. Des briques open-source comme  [Gitbase](https://github.com/src-d/gitbase) ou  [Babelfish](https://doc.bblf.sh/) permettent de faciliter les étapes de collection et d'analyse de la donnée.
 
 <!--more-->
 
-Cet article est le compte-rendu d'un codelab très instructif, 
-organisé par Alex Bezzubov et Hugo Mougard de chez 
-[_source{d}_](https://sourced.tech/) lors du DevFest Nantes 2019.
-En guise d'introduction, vous pouvez consulter le 
-[code source du codelab](https://github.com/mloncode/devfest2019-workshop)
-ainsi que les 
-[slides de la présentation](https://docs.google.com/presentation/d/1vF0JMagmXXzn-h-OaJu6CsDt78oSQSg58YFJsBUaHxk/edit). D'autres collaborateurs de _source{d}_ ont également proposé un
-[talk en anglais sur le sujet](https://www.youtube.com/watch?v=6NhQIaJfWXk)
-ainsi que [les slides associés](https://egorbu.github.io/usedata_2019/).
+Cet article est le compte-rendu d'un codelab très instructif,  organisé par Alex Bezzubov et Hugo Mougard de chez  [_source{d}_](https://sourced.tech/) lors du DevFest Nantes 2019. En guise d'introduction, vous pouvez consulter le  [code source du codelab](https://github.com/mloncode/devfest2019-workshop) ainsi que les  [slides de la présentation](https://docs.google.com/presentation/d/1vF0JMagmXXzn-h-OaJu6CsDt78oSQSg58YFJsBUaHxk/edit). D'autres collaborateurs de _source{d}_ ont également proposé un [talk en anglais sur le sujet](https://www.youtube.com/watch?v=6NhQIaJfWXk) ainsi que [les slides associés](https://egorbu.github.io/usedata_2019/).
 
-J'ai enfin réalisé une présentation pour débriefer le codelab avec 
-mes collègues. Malheureusement la qualité de capture vidéo n'est pas au 
-rendez-vous, mais vous pouvez néanmoins la 
-[visualiser sur Youtube](https://www.youtube.com/watch?v=0R7GIT4GPNk).
+J'ai enfin réalisé une présentation pour débriefer le codelab avec  mes collègues. Malheureusement la qualité de capture vidéo n'est pas au  rendez-vous, mais vous pouvez néanmoins la  [visualiser sur Youtube](https://www.youtube.com/watch?v=0R7GIT4GPNk).
 
 # Objectifs
 
-Le _MLonCode_ (Machine Learning on source code) est un domaine assez récent 
-(2-3 ans) mais pour lequel l'intérêt est croissant, avec beaucoup de publications
-des grands acteurs de l'infomatique (Microsoft, Google, Facebook)
-et de plus en plus conférences sur le sujet.
+Le _MLonCode_ (Machine Learning on source code) est un domaine assez récent  (2-3 ans) mais pour lequel l'intérêt est croissant, avec beaucoup de publications des grands acteurs de l'infomatique (Microsoft, Google, Facebook) et de plus en plus conférences sur le sujet.
 
-Le principe de lancer des algorithmes de machine learning sur du code source
-a plusieurs applications intéressantes. Par exemple comprendre l'organisation de
-son code,extraire des métriques évoluées et identifier des patterns ou 
-des anti-patterns (code commun, répétitions...) .
+Le principe de lancer des algorithmes de machine learning sur du code source a plusieurs applications intéressantes. Par exemple comprendre l'organisation de son code,extraire des métriques évoluées et identifier des patterns ou  des anti-patterns (code commun, répétitions...) .
 
-Autre exemple, améliorer l'outillage, les environnements de développement,
-les outils de compilation ou de déploiement. Cette approche est actuellement 
-mise en oeuvre par Microsoft avec _IntelliCode_, dont la promesse est de fournir une
-meilleure auto-complétion, contextualisée en fonction du projet et des habitudes
-des développeurs, de faire des propositions de refactoring plus pertinentes, etc.
+Autre exemple, améliorer l'outillage, les environnements de développement, les outils de compilation ou de déploiement. Cette approche est actuellement  mise en oeuvre par Microsoft avec _IntelliCode_, dont la promesse est de fournir une meilleure auto-complétion, contextualisée en fonction du projet et des habitudes des développeurs, de faire des propositions de refactoring plus pertinentes, etc.
 
 # Approches
 
-Plusieurs approches sont possibles pour aborder le sujet. Celle proposée
-par le codelab considère que la formulation du code source _imite_ 
-le langage naturel (ou <acronym title="Langage Naturel">LN</acronym>). 
-C'est un _a priori_ assez fort, mais qui a du sens vu la manière dont le
-code est écrit.
+Plusieurs approches sont possibles pour aborder le sujet. Celle proposée par le codelab considère que la formulation du code source _imite_  le langage naturel (ou <acronym title="Langage Naturel">LN</acronym>).  C'est un _a priori_ assez fort, mais qui a du sens vu la manière dont le code est écrit.
 
-En effet, les identifiants de variables et de méthodes sont 
-généralement choisis de manière à décrire de façon fluide le
-comportement attendu. De même, les mots clés logiques (`if...then`,
-`for`, etc.) permettent de structurer le code afin qu'il soit lisible, 
-quasiment comme une suite logique de phrases _naturelles_.
+En effet, les identifiants de variables et de méthodes sont  généralement choisis de manière à décrire de façon fluide le comportement attendu. De même, les mots clés logiques (`if...then`, `for`, etc.) permettent de structurer le code afin qu'il soit lisible,  quasiment comme une suite logique de phrases _naturelles_.
 
-En considérant le code source comme un ensemble de mots, 
-cette approche a l'avantage de pouvoir réappliquer tous les
-patterns statistiques et modèles de machine learning
-déja mis en oeuvre en traitement automatique du langage naturel
-(<acronym  title="Traitement Automatique du Langage Naturel">TALN</acronym> 
-ou en anglais <acronym title="Natural Language Processing">NLP</acronym>).
-Elle a aussi ses limites, dans la mesure où elle tient compte que
-des mots eux-mêmes, sans tirer profit de toute la structure
-sous-jacente, (méthodes, branchements, regroupements logiques, ...),
-qui est malgré tout une part importante de l'information portée par
-le code.
+En considérant le code source comme un ensemble de mots,  cette approche a l'avantage de pouvoir réappliquer tous les patterns statistiques et modèles de machine learning déja mis en oeuvre en traitement automatique du langage naturel (<acronym  title="Traitement Automatique du Langage Naturel">TALN</acronym>  ou en anglais <acronym title="Natural Language Processing">NLP</acronym>). Elle a aussi ses limites, dans la mesure où elle tient compte que des mots eux-mêmes, sans tirer profit de toute la structure sous-jacente, (méthodes, branchements, regroupements logiques, ...), qui est malgré tout une part importante de l'information portée par le code.
 
 # Etapes
 
-Le codelab propose judicieusement de reprendre un sommaire calqué sur les étapes traditionnellement mises en oeuvre dans les projets de _data science_:
+Le codelab propose judicieusement un sommaire calqué sur les étapes classiquement mises en oeuvre dans les projets de _data science_:
 
 1. Définir le problème
 2. Collecter la donnée
@@ -89,16 +40,35 @@ Le codelab propose judicieusement de reprendre un sommaire calqué sur les étap
 4. Evaluer les résultats
 5. Communiquer
 
-Ce sont des tâches classiques qui, réalisées dans cet ordre, ont d'aborder chacun des éléments liés à la conception et à la validation d'un projet.
+Cette organisation permet d'aborder, dans l'ordre, chacune des tâches liés à la conception et à la validation d'un modèle de machine learning.
 
-Les travaux pratiques du codelab consistaient à travailler autour de deux sujets, plutôt accessibles en théorie:
-- Détecter dans une codebase les projets similaires (afin par exemple de les regrouper par thème: sécurité, gestion de données, interfaces, ...)
+Comme problème à résoudre, les travaux pratiques du codelab consistaient à travailler autour de deux sujets, plutôt accessibles en théorie:
+- Détecter dans une codebase les projets similaires (afin, par exemple, de les regrouper par thème: sécurité, gestion de données, interfaces, ...)
 - Suggérer algorithmiquement le nom d'une méthode à partir de son corps (son cotenu)
 
 # Collecter la donnée
-Gitbase
 
-# Analyser la donnée
-Babelfish
+La première étape est donc de récupérer la donnée, c'est à dire le code source sur lequel travailler. Un énorme avantage pour ce domaine, c'est de disposer d'une très grande source de données, librement accessibles et téléchargeables: Github. Le codelab se proposait par exemple de se concentrer sur une organisation _intéressante_, pour la variété des sujets abordés et la quantité de données disponibles : Apache.
 
-# Créer le modèle
+Le site propose une API publique qui peut être requêtée facilement afin de récupérer la liste des organisations et la liste des dépôts de code associés. Dès lors la récupération des données peut sembler triviale. Elle pose en réalité de vrais problèmes de performance (temps de téléchargement) et de stockage (taille sur le disque dur). Pour simplifier la recherche s'est donc artificiellement limitée aux dépôts "populaires", c'est à dire avec un nombre minimum de favoris (étoiles) et en évitant les dépôts les plus gros (certains dépôts d'Apache sont vraiment importants).
+
+Ces limitations prises en compte, il s'agit maintenant :
+- de télécharger le code en tant que tel (`git clone` / `git checkout`)
+- de paralléliser ces téléchargements pour gagner du temps
+- de filtrer et de nettoyer les dépôts.
+
+L'étape de filtrage est nécessaire car les dépôts contiennent en général, en plus du code source, des fichiers de configuration, des librairies, etc. peu intéressantes pour l'analyse. Il s'agit donc de supprimer, par exemple:
+- les fichiers de configuration protobuf
+- les répertoires `vendors`
+- etc.
+
+Une fois le code récupéré, on peut commencer à travailler dessus. Il aurait été possible de parcourir directement les répertoires et de lire les fichiers et l'historique en ligne de commande. Le codelab propose une approche plus pragmatique, utilisant un outil open-source développé par _source{d}_: [Gitbase](https://github.com/src-d/gitbase).
+
+Cet outil va venir charger automatiquement le contenu des dépôts, les exposer comme une base de données SQL et en simplifier l'exporation via des requêtes. Gitbase permet donc de travailler plus rapidement et plus efficacement qu'en allant parser manuellement les fichiers du répertoire `.git`.
+
+![modèle de données simplifié Gitbase](https://raw.githubusercontent.com/mloncode/devfest2019-workshop/master/notebooks/img/tables.png)
+
+
+# Analyser la donnée Babelfish
+
+# Créer le modèle 
