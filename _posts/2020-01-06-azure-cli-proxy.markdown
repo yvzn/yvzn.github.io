@@ -104,7 +104,16 @@ une fonction Powershell personnalisée:
 ```powershell
 function Configure-Proxy 
 {
-...
+  param($my_proxy_host = "some-host-name-or-ip", $my_proxy_port = "8080")
+
+  $my_credentials = Get-Credential
+  $my_proxy_string = "http://$($my_credentials.UserName):$($my_credentials.GetNetworkCredential().password)@${my_proxy_host}:${my_proxy_port}"
+
+  [Environment] ::SetEnvironmentVariable("HTTP_PROXY", $my_proxy_string, [EnvironmentVariableTarget]::Process)
+  [Environment] ::SetEnvironmentVariable("HTTPS_PROXY", $my_proxy_string, [EnvironmentVariableTarget]::Process)
+
+  Remove-Variable my_credentials
+  Remove-Variable my_proxy_string
 }
 ```
 
