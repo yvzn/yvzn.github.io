@@ -4,6 +4,7 @@ date: 2020-01-02 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
+series: spring-boot-azure
 ---
 
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> La plateforme
@@ -155,3 +156,4 @@ La configuration choisie permet de déclencher ce déploiement automatiquement
 Un exemple de [fichier de configuration complet](https://github.com/yvzn/recikligi/blob/master/azure-pipelines.yml)
 est disponible sur Github. 
 
+{% include series.html %}
