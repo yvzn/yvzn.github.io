@@ -4,6 +4,7 @@ date: 2019-10-28 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
+series: spring-boot-azure
 ---
 
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> La ressource
@@ -130,3 +131,5 @@ le portail lorsque tout sera prêt.
 
 Dans un second article, je décrirai comment déployer automatiquement l'application dans
 cette nouvelle ressource.
+
+{% include series.html %}
