@@ -1,5 +1,5 @@
-<aside class="series">
-  <h4>Cet article fait partie d'une série <em>{{ site.data.series | where: 'id', page.series | map: 'title' }}</em></h4>
+<nav class="series">
+  <h4>Cet article fait partie de la série &laquo;{{ site.data.series | where: 'id', page.series | map: 'title' }}&raquo; :</h4>
   <ol>
     {% assign series-posts = site.posts | reverse | where: 'series', page.series %}
     {% for post in series-posts %}
@@ -13,6 +13,6 @@
     {% endfor %}
   </ol>
   {% if series-posts.size == 1 %}
-  <p>Plus d'articles à venir</p>
+  <p>Plus d'articles à venir...</p>
   {% endif %}
-</aside>
+</nav>
