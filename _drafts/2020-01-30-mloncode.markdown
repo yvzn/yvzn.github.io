@@ -7,7 +7,7 @@ license: CC-BY-SA-4.0
 series: machine-learning-on-code
 ---
 
-<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Lancer des algorithmes de machine learning sur son code source permet d'extraire des informations sur la structure des projets et d'améliorer l'outillage de développement. Ce sont les méthodes inspirées du traitement automatique du langage naturel qui semblent donner les premiers résultats. Des briques open-source comme [Gitbase](https://github.com/src-d/gitbase) ou [Babelfish](https://doc.bblf.sh/) permettent de faciliter les étapes de collection et d'analyse de la donnée.
+<acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Lancer des algorithmes de machine learning sur son code source permet d'extraire des informations sur la structure des projets et d'améliorer l'outillage de développement. Ce sont les méthodes inspirées du traitement automatique du langage naturel qui semblent donner les premiers résultats. Des briques open-source comme [Gitbase](https://github.com/src-d/gitbase) ou [Babelfish](https://doc.bblf.sh/) permettent de faciliter les étapes de collection et d'analyse de la donnée. Dans ce premier article, je décris l'approche utilisée et les étapes à réaliser.
 
 <!--more-->
 
@@ -51,7 +51,7 @@ Comme exemple de problèmes à résoudre, les travaux pratiques se font autour d
 
 La première étape est donc de récupérer le code source sur lequel travailler. Un énorme avantage dans ce domaine, c'est de disposer d'une très grande source de données, librement accessibles et téléchargeables: [Github](https://github.com). Le codelab propose de se concentrer sur une organisation en particulier, _intéressante_ pour la variété des sujets abordés et la quantité d'informations disponibles : Apache.
 
-Github propose une API publique qui peut être requêtée facilement afin de récupérer la liste des organisations et la liste des dépôts de code associés. C'est un bon point de départ, néanmoins la récupération des données pose quelques problèmes de performance (temps de téléchargement) et de stockage (taille des fichiers sur le disque dur). Pour aller plus vite, la recherche est donc limitée aux dépôts _populaires_, c'est à dire avec un nombre minimum de favoris et en évitant les dépôts les plus gros, certains dépôts d'Apache étant vraiment volumineux.
+Github propose une API publique qui peut être requêtée afin de récupérer la liste des organisations et la liste des dépôts de code associés. C'est un bon point de départ, néanmoins la récupération des données pose quelques problèmes de performance (temps de téléchargement) et de stockage (taille des fichiers sur le disque dur). Pour aller plus vite, la recherche est donc limitée aux dépôts _populaires_, c'est à dire avec un nombre minimum de favoris et en évitant les dépôts les plus gros, certains dépôts d'Apache étant vraiment volumineux.
 
 Ces restrictions prises en compte, il s'agit maintenant :
 - de télécharger le code en tant que tel (avec `git clone` / `git checkout`)
@@ -119,4 +119,4 @@ Le dernier outil présenté, [pyLDAvis](https://github.com/bmabey/pyLDAvis), per
 
 Par manque de temps, nous n'avons pas pu aborder le second sujet qui consistait à suggérer algorithmiquement le nom d'une méthode à partir de son corps. Pour résumer, les animateurs nous ont indiqué utiliser des modèles de traduction automatisée (comme [OpenNMT](https://opennmt.net/) et [seq2seq](https://google.github.io/seq2seq/)) pour aborder cette problématique, et nous ont redirigé vers le [code source du codelab](https://github.com/mloncode/devfest2019-workshop).
 
-Cet atelier m'a donc permis de m'initier au _MLonCode_ (Machine Learning on source code) dont l'approche inspirée du _Natural Language Processing_ permet d'extraire des métriques simples de sa codebase. Il a repris méthodiquement les principales étapes d'un projet de data science, ce qui permet de constater que la majorité du travail consiste à collecter la donnée (le code source) et à la formatter / à la nettoyer pour la rendre exploitable. Il a également mis l'accent sur le fait qu'il existe de nombreux outils pour se faciliter la tâche et qu'il ne faut pas hésiter à les utiliser.
+Cet atelier m'a donc permis de m'initier au _MLonCode_ (Machine Learning on source code) dont l'approche inspirée du _Natural Language Processing_ permet d'extraire des métriques de sa codebase. Il a repris méthodiquement les principales étapes d'un projet de data science, ce qui permet de constater que la majorité du travail consiste à collecter la donnée (le code source) et à la formatter / à la nettoyer pour la rendre exploitable. Il a également mis l'accent sur le fait qu'il existe de nombreux outils pour se faciliter la tâche et qu'il ne faut pas hésiter à les utiliser.
