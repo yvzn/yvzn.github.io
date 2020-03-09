@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning sur du code source"
+title: "Machine Learning sur du code source (partie 1)"
 date: 2020-02-28 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
