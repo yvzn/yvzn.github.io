@@ -13,7 +13,7 @@ series: machine-learning-on-code
 
 # Collecter la donnée
 
-L'étape suivante est donc de récupérer le code source sur lequel travailler. Un énorme avantage dans ce domaine, c'est de disposer d'une très grande source de données, librement accessibles et téléchargeables: [Github](https://github.com). Le codelab propose de se concentrer sur une organisation en particulier, _intéressante_ pour la variété des sujets abordés et la quantité d'informations disponibles : Apache.
+Après avoir défini la problématique, l'étape suivante est donc de récupérer le code source sur lequel travailler. Un énorme avantage dans ce domaine, c'est de disposer d'une très grande source de données, librement accessibles et téléchargeables: [Github](https://github.com). Le codelab propose de se concentrer sur une organisation en particulier, _intéressante_ pour la variété des sujets abordés et la quantité d'informations disponibles : Apache.
 
 Github propose une API publique qui peut être requêtée afin de récupérer la liste des organisations et la liste des dépôts de code associés. C'est un bon point de départ, néanmoins la récupération des données pose quelques problèmes de performance (temps de téléchargement) et de stockage (taille des fichiers sur le disque dur). Pour aller plus vite, la recherche est donc limitée aux dépôts _populaires_, c'est à dire avec un nombre minimum de favoris et en évitant les dépôts les plus gros, certains dépôts d'Apache étant vraiment volumineux.
 
