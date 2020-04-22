@@ -2,3 +2,6 @@
   title: Une application Spring Boot avec Azure Devops   
 - id: machine-learning-on-code
   title: ML on Code
+- id: authenticated-proxy
+  title: Utiliser un proxy authentifié sous Windows
+  

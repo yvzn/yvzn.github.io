@@ -1,5 +1,4 @@
 # En cours
-- MLonCode
 
 # Prévu
 - Un an avec React

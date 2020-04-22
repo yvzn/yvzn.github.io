@@ -4,6 +4,7 @@ date: 2020-01-06 00:00:00 +001
 layout: post
 author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
+series: authenticated-proxy
 ---
 
 
@@ -127,3 +128,5 @@ az login
 az account list -o table
 ...
 ```
+
+{% include series.html  %}
