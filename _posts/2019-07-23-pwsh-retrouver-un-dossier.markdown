@@ -15,7 +15,7 @@ le résultat de la recherche.
 <!--more-->
 
 La commande suivante permet de retrouver rapidement les sous-répertoires du
-répertoire courant dont le nom commence par "source" :
+répertoire courant dont le nom commence par "source"&nbsp;:
 
 ```powershell
 Get-ChildItem -Recurse -Directory -Filter source*
@@ -29,14 +29,14 @@ chaine de caractères.
 Une fois qu'on a retrouvé le ou les répertoires, un pipe `|` suivi
 de `ForEach-Object` permet de réaliser un traitement sur tous
 les résultats. Par exemple pour afficher le chemin complet 
-de chaque résultat :
+de chaque résultat&nbsp;:
 
 ```powershell
 Get-ChildItem -Recurse -Directory -Filter source* | ForEach-Object { Write-Host $_.FullName }
 ```
 
 La combinaison que j'utilise souvent permet de trouver le premier
-sous-répertoire avec le nom donné et de s'y déplacer :
+sous-répertoire avec le nom donné et de s'y déplacer&nbsp;:
 
 ```powershell
 Get-ChildItem -Recurse -Directory -Filter source* | ForEach-Object { Set-Location $_.FullName; break }
@@ -46,21 +46,21 @@ L'instruction `break` est importante, elle permet d'arrêter la recherche
 après le premier résultat, ce qui est une optimisation intéressante
 dans mon cas.
 
-En version *compacte* :
+En version *compacte*&nbsp;:
 
 ```powershell
 gci -Recurse -Directory -Filter source* | % { cd $_.FullName; break }
 ```
 
 Autre exemple, trouver le premier fichier `*.html` et de l'ouvrir avec
-l'application associée :
+l'application associée&nbsp;:
 
 ```powershell
 Get-ChildItem -Recurse -File -Filter *.html | ForEach-Object { Start-Process $_; break }
 ```
 
 Pour réutiliser ces commandes ultérieurement, un raccourci peut être ajouté
-dans le profil Powershell. Pour éditer son profil (par exemple avec VS Code) :
+dans le profil Powershell. Pour éditer son profil (par exemple avec VS Code)&nbsp;:
 
 ```powershell
 code $PROFILE

@@ -11,7 +11,7 @@ les données à caractère personnel comme "toute information se rapportant à u
 physique_ identifiée ou identifiable".
 
 Cette définition est assez vaste et peut couvrir énormément d'aspects.
-Il n'existe pas vraiment de liste officielle et exhaustive : il convient
+Il n'existe pas vraiment de liste officielle et exhaustive&nbsp;: il convient
 donc d'avoir une approche prudente lors de la mise en place
 de traitements concernant les données des individus. Voici
 néanmoins une tentative d'énumération...
@@ -20,7 +20,7 @@ néanmoins une tentative d'énumération...
 
 Le site de la CNIL fournit plusieurs _exemples_,
 dans sa description du [registre des traitements](https://www.cnil.fr/sites/default/files/atoms/files/registre_rgpd_basique.pdf),
-notamment :
+notamment&nbsp;:
 
 * Etat-civil, identité, données d'identification, images
     * nom
@@ -73,7 +73,7 @@ au RGPD (consentement, durée de conservation, droit de consultation et d'efface
 etc.)
 
 Enfin, certaines collectes sont interdites par principe
-par [l'article 9 du RGPD](https://gdpr.algolia.com/fr/gdpr-article-9) :
+par [l'article 9 du RGPD](https://gdpr.algolia.com/fr/gdpr-article-9)&nbsp;:
 
 * l'origine raciale ou ethnique
 * les opinions politiques,

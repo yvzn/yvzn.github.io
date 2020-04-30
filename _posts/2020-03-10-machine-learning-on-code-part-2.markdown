@@ -13,11 +13,11 @@ series: machine-learning-on-code
 
 # Collecter la donnée
 
-Après avoir défini la problématique, l'étape suivante est donc de récupérer le code source sur lequel travailler. Un énorme avantage dans ce domaine, c'est de disposer d'une très grande source de données, librement accessibles et téléchargeables: [Github](https://github.com). Le codelab propose de se concentrer sur une organisation en particulier, _intéressante_ pour la variété des sujets abordés et la quantité d'informations disponibles : Apache.
+Après avoir défini la problématique, l'étape suivante est donc de récupérer le code source sur lequel travailler. Un énorme avantage dans ce domaine, c'est de disposer d'une très grande source de données, librement accessibles et téléchargeables: [Github](https://github.com). Le codelab propose de se concentrer sur une organisation en particulier, _intéressante_ pour la variété des sujets abordés et la quantité d'informations disponibles&nbsp;: Apache.
 
 Github propose une API publique qui peut être requêtée afin de récupérer la liste des organisations et la liste des dépôts de code associés. C'est un bon point de départ, néanmoins la récupération des données pose quelques problèmes de performance (temps de téléchargement) et de stockage (taille des fichiers sur le disque dur). Pour aller plus vite, la recherche est donc limitée aux dépôts _populaires_, c'est à dire avec un nombre minimum de favoris et en évitant les dépôts les plus gros, certains dépôts d'Apache étant vraiment volumineux.
 
-Ces restrictions prises en compte, il s'agit maintenant :
+Ces restrictions prises en compte, il s'agit maintenant&nbsp;:
 - de télécharger le code en tant que tel (avec `git clone` / `git checkout`)
 - de paralléliser ces téléchargements pour gagner du temps
 - de filtrer et de nettoyer les dépôts
@@ -29,7 +29,7 @@ L'étape de filtrage est nécessaire car les dépôts contiennent en général, 
 
 Une fois le code récupéré localement, on peut parcourir l'arborescence des répertoires, de lire les fichiers un par un et de consulter l'historique git en ligne de commande. C'est en réalité plutôt fastidieux et une approche plus pragmatique est proposée, utilisant un outil open-source développé par _source{d}_: [Gitbase](https://github.com/src-d/gitbase).
 
-Cet outil permet de charger automatiquement le contenu des dépôts, de les exposer comme une base de données et d'en simplifier l'exporation via des requêtes SQL. Voici par exemple un apercu des tables du modèle Gitbase utilisées pour le codelab :
+Cet outil permet de charger automatiquement le contenu des dépôts, de les exposer comme une base de données et d'en simplifier l'exporation via des requêtes SQL. Voici par exemple un apercu des tables du modèle Gitbase utilisées pour le codelab&nbsp;:
 
 ![modèle de données simplifié Gitbase](https://raw.githubusercontent.com/mloncode/devfest2019-workshop/master/notebooks/img/tables.png)
 

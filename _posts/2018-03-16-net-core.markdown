@@ -43,7 +43,7 @@ etc.
 
 ```c#
 [Route("api/[controller]")]
-public class WidgetsController : Controller
+public class WidgetsController&nbsp;: Controller
 ...
 [HttpGet]
 public IEnumerable<Widget> GetAll()
@@ -132,7 +132,7 @@ en production.
 ## En pratique 
 
 La construction de l'image de l'application nécessite donc
-d'utiliser consécutivement deux images dans le Dockerfile :
+d'utiliser consécutivement deux images dans le Dockerfile&nbsp;:
 `dotnet:sdk` pour compiler le binaire puis `dotnet:runtime` pour
 l'image finale.
 
@@ -199,7 +199,7 @@ avec laquelle on peut ajouter des outils de sécurisation ou
 d'aide au développement, comme CORS ou Swagger, 
 avec un minimum de code.
 
-C'est l'avantage d'arriver après tout le monde 😄 : proposer un
+C'est l'avantage d'arriver après tout le monde 😄&nbsp;: proposer un
 framework moderne avec des technos éprouvées,
 adaptable rapidement avec une configuration minimale.
 

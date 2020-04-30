@@ -16,7 +16,7 @@ Ce serait tellement long de résumer l'ensemble des sujets abordés. Pour cette 
 
 C'est justement le titre de la première conférence sur laquelle je souhaite faire un retour: ["Quelles compétences pour travailler dans un monde digital en constante évolution"](https://www.youtube.com/watch?v=hzTWmtshfwQ), présentée par Céline BOISSON (de Google) et Jérôme HOARAU.
 
-La conférence met l'accent sur les softskills, ces compétences pas directement liées au métier exercé, mais qui ont plus attrait à la façon de travailler, à la méthodologie, comme :
+La conférence met l'accent sur les softskills, ces compétences pas directement liées au métier exercé, mais qui ont plus attrait à la façon de travailler, à la méthodologie, comme&nbsp;:
 * la concentration
 * la motivation 
 * la curiosité
@@ -26,28 +26,28 @@ La conférence met l'accent sur les softskills, ces compétences pas directement
 
 Elle explique que chacun peut développer ou améliorer ces softskills, à l'aide de petites routines quotidiennes simples à mettre en place.
 
-Par exemple en faisant un peu introspection sur ce que je viens de faire, en essayant de réaliser ce que telle ou telle activité m'a appris, que ce soit directement ou non lié à mon activité principale. Un peu sur le principe à l'école : après chaque sortie "périscolaire" comme la piscine ou la patinoire, prendre conscience des facultés que l'activité m'a permis de développer, consciemment ou non : la vie en groupe, gérer un trajet de bus en commun, être à l'heure à un rendez-vous...
+Par exemple en faisant un peu introspection sur ce que je viens de faire, en essayant de réaliser ce que telle ou telle activité m'a appris, que ce soit directement ou non lié à mon activité principale. Un peu sur le principe à l'école&nbsp;: après chaque sortie "périscolaire" comme la piscine ou la patinoire, prendre conscience des facultés que l'activité m'a permis de développer, consciemment ou non&nbsp;: la vie en groupe, gérer un trajet de bus en commun, être à l'heure à un rendez-vous...
 
-Une autre routine possible : noter dans un carnet, chaque jour pendant une semaine, un enseignement de la journée. Au bout d'une semaine, il est possible de capitaliser de toutes les choses qu'on a accomplies cette semaine. Cela n'a pas forcément à être un enseignement positif, c'est même mieux si c'est une erreur et si je peux capitaliser dessus.
+Une autre routine possible&nbsp;: noter dans un carnet, chaque jour pendant une semaine, un enseignement de la journée. Au bout d'une semaine, il est possible de capitaliser de toutes les choses qu'on a accomplies cette semaine. Cela n'a pas forcément à être un enseignement positif, c'est même mieux si c'est une erreur et si je peux capitaliser dessus.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hzTWmtshfwQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Transparence et échange
 
-Autre exemple de softskill : savoir être transparent et échanger librement sur quoi je travaille, sur quels sont mes objectifs. Et donc également accepter l'évaluation de mes pairs. Ces valeurs sont largement promues par l'agilité.
+Autre exemple de softskill&nbsp;: savoir être transparent et échanger librement sur quoi je travaille, sur quels sont mes objectifs. Et donc également accepter l'évaluation de mes pairs. Ces valeurs sont largement promues par l'agilité.
 
-La seconde conférence a, à ce sujet, un titre volontairement provocateur : ["Agile methods are dangerous"](https://www.youtube.com/watch?v=1eRb0tiKRPc), présentée par Julian HOLMES
+La seconde conférence a, à ce sujet, un titre volontairement provocateur&nbsp;: ["Agile methods are dangerous"](https://www.youtube.com/watch?v=1eRb0tiKRPc), présentée par Julian HOLMES
 de ThoughtWorks – la société qui publie tous les ans son fameux TechRadar.
 
-Le message en substance : les méthodes agiles apportent de la valeur, mais parfois les différents interlocuteurs au sein d'un projet n'ont pas le même niveau de compréhension de ce qui est communément appelé agilité. Ceci peut être source de frictions, de frustrations, voire d'animosité. Comment réagir dans ces situations, comment orienter la conversation en fonction des remarques de son interlocuteur, comment réagir de manière agile ?
+Le message en substance&nbsp;: les méthodes agiles apportent de la valeur, mais parfois les différents interlocuteurs au sein d'un projet n'ont pas le même niveau de compréhension de ce qui est communément appelé agilité. Ceci peut être source de frictions, de frustrations, voire d'animosité. Comment réagir dans ces situations, comment orienter la conversation en fonction des remarques de son interlocuteur, comment réagir de manière agile&nbsp;?
 
-Première question entendue régulièrement dans des organisations qui se mettent à l'agilité : "Ça y est, on est agile ?".
+Première question entendue régulièrement dans des organisations qui se mettent à l'agilité&nbsp;: "Ça y est, on est agile&nbsp;?".
 
-En fait, il n'y a pas de réponse : l'agilité en tant que telle n'est pas un objectif, il n'existe pas de "KPI agile". Ce serait même contreproductif de mesurer un tel "degré d'agilité", puisque ce type de mesure a tendance à dicter un comportement plutôt qu'à observer une évolution.
+En fait, il n'y a pas de réponse&nbsp;: l'agilité en tant que telle n'est pas un objectif, il n'existe pas de "KPI agile". Ce serait même contreproductif de mesurer un tel "degré d'agilité", puisque ce type de mesure a tendance à dicter un comportement plutôt qu'à observer une évolution.
 
 Il faut au contraire promouvoir sans cesse la collaboration, l'adaptation, l'amélioration continue, par exemple via les rétrospectives. L'agilité dans ce sens rend terriblement transparent et il faut sans cesse savoir partager et échanger sur ses actions quotidiennes.
 
-Autre réplique : "Ne me parlez pas d'agilité".
+Autre réplique&nbsp;: "Ne me parlez pas d'agilité".
 
 Ces mots sont souvent dus à des mauvaises expériences, à des a priori sur l'agilité, qui provoquent un rejet systématique de tout le vocabulaire agile.
 
@@ -59,11 +59,11 @@ La clé, ce qui importe finalement, c'est la réussite ou sa perception.
 
 # Positiver l'échec
 
-Troisième exemple de softskill : développer une culture positive de l'échec. Plusieurs conférences évoquaient ce sujet. L'idée sous-jacente est d'améliorer la résilience des organisations et promovoir la bienveillance entre collaborateurs.
+Troisième exemple de softskill&nbsp;: développer une culture positive de l'échec. Plusieurs conférences évoquaient ce sujet. L'idée sous-jacente est d'améliorer la résilience des organisations et promovoir la bienveillance entre collaborateurs.
 
-Nelson Mandela disait : "Je ne perds jamais, soit je gagne, soit j'apprends".
+Nelson Mandela disait&nbsp;: "Je ne perds jamais, soit je gagne, soit j'apprends".
 
-Cela peut passer par la valorisation de la prise de risque, le soutien inconditionnel des "courageous penguins" : les premiers du groupe qui osent se jeter à l'eau et servent de modèle à ceux qui suivent.
+Cela peut passer par la valorisation de la prise de risque, le soutien inconditionnel des "courageous penguins"&nbsp;: les premiers du groupe qui osent se jeter à l'eau et servent de modèle à ceux qui suivent.
 
 En n'oubiant pas que le risque est indissosciablement lié à un sentiment de sécurité. Car prendre un risque sans sécurité, c'est juste se mettre en danger. Encourager la prise de risque est donc nécessairement lié au fait d'encourager et de soutenir, de rassurer, de sécuriser et de détramatiser les échecs.
 
@@ -73,7 +73,7 @@ En n'oubiant pas que le risque est indissosciablement lié à un sentiment de s�
 
 Dans sa conférence ["Recast.Ai"](https://www.youtube.com/watch?v=x8a6Bs-OHog), la fondatrice Jasmine ANTEUNIS revient sur la succès story de sa startup de chatbots / traitement du langage naturel, récemment rachetée par le géant SAP.
 
-Elle évoque une heuristique intéressante pour la prise de décision : décider vite, à chaque fois, même en cas d'hésitation. Dans le pire des cas, si on se trompe et qu'on a pris le mauvais choix, on s'en rend compte plus rapidement et on peut changer son fusil d'épaule plus tôt. Evidemment, si on a pris la bonne décision, c'est tout gagné.
+Elle évoque une heuristique intéressante pour la prise de décision&nbsp;: décider vite, à chaque fois, même en cas d'hésitation. Dans le pire des cas, si on se trompe et qu'on a pris le mauvais choix, on s'en rend compte plus rapidement et on peut changer son fusil d'épaule plus tôt. Evidemment, si on a pris la bonne décision, c'est tout gagné.
 
 Bien sûr, cette politique n'est applicable que dans un cadre où l'erreur, l'échec sont dédramatisés et positivement acceptés.
 
@@ -83,9 +83,9 @@ Bien sûr, cette politique n'est applicable que dans un cadre où l'erreur, l'é
 
 Dans sa conférence ["How bookkeepers fucked up IT"](https://www.youtube.com/watch?v=5dY3zJNB3xI), Quentin ADAM revient lui sur plusieurs décisions qu'il faut savoir prendre, qui s'imposent parfois d'elles-mêmes une fois qu'on admet s'être trompé.
 
-Savoir supprimer du code qu'on a écrit, s'il est de mauvaise qualité (ou même s'il est de bonne qualité) : utiliser des frameworks ou des progiciels externes, pour ne plus être responsable de la maintenance de ce code et en externaliser les coûts.
+Savoir supprimer du code qu'on a écrit, s'il est de mauvaise qualité (ou même s'il est de bonne qualité)&nbsp;: utiliser des frameworks ou des progiciels externes, pour ne plus être responsable de la maintenance de ce code et en externaliser les coûts.
 
-Savoir tout reconstruire de zéro : parfois on a besoin de se planter sur un premier projet, mal construit. On ne connait pas la technologie, on maîtrise mal les entrants, etc. Mais ce n'est pas du temps perdu pour autant, car ce premier projet a permis d'apprendre comment faire. Il est préférable d'en faire le deuil et l'expérience ainsi capitalisée permet d'aller beaucoup plus vite, non seulement sur la refonte dans une deuxième version, beaucoup plus propre, mais aussi sur les projets similaires suivants. Dans ce cas l'échec aura été bénéfique.
+Savoir tout reconstruire de zéro&nbsp;: parfois on a besoin de se planter sur un premier projet, mal construit. On ne connait pas la technologie, on maîtrise mal les entrants, etc. Mais ce n'est pas du temps perdu pour autant, car ce premier projet a permis d'apprendre comment faire. Il est préférable d'en faire le deuil et l'expérience ainsi capitalisée permet d'aller beaucoup plus vite, non seulement sur la refonte dans une deuxième version, beaucoup plus propre, mais aussi sur les projets similaires suivants. Dans ce cas l'échec aura été bénéfique.
 
 Il n'existe pas de solution unique et définitive, ce n'est pas parce qu'une technologie est pertinente à un moment donné qu'il faut la réutiliser systématiquement et pour toujours. Et par conséquent il faut éviter les "company stack", ces piles logicielles définies une fois pour toutes pour l'ensemble d'une organisation, qui empêchent toute liberté de choix.
 
@@ -97,7 +97,7 @@ Dernier exemple de softskill: savoir gérer son temps, qui est finalement la res
 
 Afin de trouver du temps libre, idéalement 20% de "temps de cerveau disponible", afin de pouvoir aller se nourrir ailleurs, être curieux, découvrir de nouvelles façons de faire.
 
-Dernière conférence : ["Comment l'IA va augmenter l'homme"](https://www.youtube.com/watch?v=LkuUm6ZplAA) de William ELDIN. Ce dernier explique que, à l'image de la mécanisation au siècle dernier, qui a permis de nous affranchir de tâches physiques et répétitives, sans grande valeur ajoutée, l'intelligence artificielle a un potentientiel similaire pour nous libérer des tâches "intellectuelles", elles aussi répétitives et sans grande valeur ajoutée.
+Dernière conférence&nbsp;: ["Comment l'IA va augmenter l'homme"](https://www.youtube.com/watch?v=LkuUm6ZplAA) de William ELDIN. Ce dernier explique que, à l'image de la mécanisation au siècle dernier, qui a permis de nous affranchir de tâches physiques et répétitives, sans grande valeur ajoutée, l'intelligence artificielle a un potentientiel similaire pour nous libérer des tâches "intellectuelles", elles aussi répétitives et sans grande valeur ajoutée.
 
 Les progrès dans ce domaine sont lents et les machines sont encore loin de nous dépasser.
 
@@ -109,7 +109,7 @@ En revanche elles peuvent effectivement déjà nous libérer de certaines action
 
 Les machines n'ont pas d'émotions et ne savent pas faire preuve d'empathie. Et l'essentiel de la technologie, de l'inventivité, vient encore de notre imagination d'être humains.
 
-Pour revenir à la question de départ : Quelles compétences pour travailler dans un monde en constante évolution ?
+Pour revenir à la question de départ&nbsp;: Quelles compétences pour travailler dans un monde en constante évolution&nbsp;?
 
 La transparence, l'empathie, la bienveillance, la capacité à apprendre de ses erreurs – et à apprendre tout court.
 

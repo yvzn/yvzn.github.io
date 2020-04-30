@@ -14,22 +14,22 @@ La plupart des commandes Powershell comme <a href="https://docs.microsoft.com/en
 
 Dans ce second article sur la fastidieuse configuration des proxy http  pour la ligne de commande sous Windows, j'aborde quelques solutions pour les _commandlets_ Powershell.
 
-Il n'est, là encore, pas possible de passer de manière transparente par le proxy défini au niveau du système d'exploitation. Mais on peut néanmoins récupérer son paramétrage en faisant un appel à :
+Il n'est, là encore, pas possible de passer de manière transparente par le proxy défini au niveau du système d'exploitation. Mais on peut néanmoins récupérer son paramétrage en faisant un appel à&nbsp;:
 
 ```powershell
 ([System.Net.WebRequest]::GetSystemWebproxy())
 ```
 
-Dans les faits le proxy à utiliser peut varier, en fonction du service distant qu'on souhaite appeler : par exemple, une entreprise peut avoir défini un proxy spécifique pour les services dans son LAN et un autre proxy pour sortir vers internet.
+Dans les faits le proxy à utiliser peut varier, en fonction du service distant qu'on souhaite appeler&nbsp;: par exemple, une entreprise peut avoir défini un proxy spécifique pour les services dans son LAN et un autre proxy pour sortir vers internet.
 
-Pour récupérer la bonne instance de proxy, on peut appeler la méthode `GetProxy` et lui passer par exemple une des futures adresses à interroger :
+Pour récupérer la bonne instance de proxy, on peut appeler la méthode `GetProxy` et lui passer par exemple une des futures adresses à interroger&nbsp;:
 
 ```powershell
 $example_address_to_query = 'https://swapi.dev/'
 $proxy = ([System.Net.WebRequest]::GetSystemWebproxy()).GetProxy()
 ```
 
-On peut se servir de cet objet `$proxy` grâce aux paramètres `-Proxy` et `-ProxyUseDefaultCredentials`, qui sont acceptés par la plupart des commandes pouvant faire des appels vers le réseau :
+On peut se servir de cet objet `$proxy` grâce aux paramètres `-Proxy` et `-ProxyUseDefaultCredentials`, qui sont acceptés par la plupart des commandes pouvant faire des appels vers le réseau&nbsp;:
 - `-Proxy` avec l'objet `$proxy` préalablement récupéré
 - et `-ProxyUseDefaultCredentials` pour utiliser les identifiants par défaut définis dans le proxy système
 
@@ -39,7 +39,7 @@ Ce qui donne par exemple:
 Invoke-WebRequest "https://swapi.dev/api/people/1/" -Proxy $proxy -ProxyUseDefaultCredentials
 ```
 
-Si on ne peut pas utiliser `-ProxyUseDefaultCredentials`, on peut passer le paramètre `-ProxyCredential` auquel on fournit les informations récupérés, par exemple, par `Get-Credential` :
+Si on ne peut pas utiliser `-ProxyUseDefaultCredentials`, on peut passer le paramètre `-ProxyCredential` auquel on fournit les informations récupérés, par exemple, par `Get-Credential`&nbsp;:
 
 ```powershell
 $my_credentials = Get-Credential

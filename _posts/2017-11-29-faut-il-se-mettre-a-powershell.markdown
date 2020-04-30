@@ -1,5 +1,5 @@
 ---
-title: "Faut-il se mettre à PowerShell ?"
+title: "Faut-il se mettre à PowerShell&nbsp;?"
 date: 2017-11-22 09:08:19 +001
 layout: post
 author: Yvan Razafindramanana
@@ -10,17 +10,17 @@ license: CC-BY-SA-4.0
 
 <!--more-->
 
-Au début, j'ai commencé par administrer des serveurs d'application sous Linux. Entre autres choses, cela m'a permis d'apprendre à utiliser bash et les outils de la ligne de commande, pour faire tout et n'importe quoi dans la console : édition de fichiers de configuration, déploiement de binaires, manipulation de données...
+Au début, j'ai commencé par administrer des serveurs d'application sous Linux. Entre autres choses, cela m'a permis d'apprendre à utiliser bash et les outils de la ligne de commande, pour faire tout et n'importe quoi dans la console&nbsp;: édition de fichiers de configuration, déploiement de binaires, manipulation de données...
 
 Lorsque j'ai installé Docker sous Windows, j'ai été intrigué qu'on me suggère d'utiliser PowerShell pour gérer mes conteneurs. Je connaissais l'existence de l'environnement de shell intégré dans les versions récentes de l'OS, mais je n'y avais jamais prêté attention. Après tout la bonne vieille console cmd héritée de MS-DOS faisait <del>bien</del> son boulot. Non je rigole, cmd fait le juste minimum (et le fait mal).
 
 Donc j'ai regardé PowerShell de plus près. J'ai essayé de comprendre comment réaliser des tâches simples, parcourir des répertoires, filtrer des fichiers...
 
-L'inconvénient c'est qu'il faut apprendre toute une syntaxe, dont la philosophie est certes cohérente, mais totalement à l'opposé de bash. En effet, au lieu de commandes qui sont quasiment des outils à tout faire, comme <code>awk</code> ou <code>find</code>, il faut décomposer la tâche en plusieurs petites instructions (des Cmdlet) qu'on chaîne les unes aux autres : <code>Get-Childitem</code> puis <code>Where-Object</code> puis <code>Select-String</code>...
+L'inconvénient c'est qu'il faut apprendre toute une syntaxe, dont la philosophie est certes cohérente, mais totalement à l'opposé de bash. En effet, au lieu de commandes qui sont quasiment des outils à tout faire, comme <code>awk</code> ou <code>find</code>, il faut décomposer la tâche en plusieurs petites instructions (des Cmdlet) qu'on chaîne les unes aux autres&nbsp;: <code>Get-Childitem</code> puis <code>Where-Object</code> puis <code>Select-String</code>...
 
 Je ne dis pas qu'une méthode est meilleure que l'autre, mais il faut un peu changer sa logique et apprendre à faire différemment.
 
-La question que je me suis alors posée est : est-ce que ça vaut le coup/coût ? Est-ce que le bénéfice apporté par l'outil mérite le temps à apprendre son fonctionnement ? 
+La question que je me suis alors posée est&nbsp;: est-ce que ça vaut le coup/coût&nbsp;? Est-ce que le bénéfice apporté par l'outil mérite le temps à apprendre son fonctionnement&nbsp;? 
 
 Surtout, si on est déjà suffisamment productif avec bash pour ne plus avoir à chercher systématiquement comment faire sur Stackoverflow, au quotidien il y a de grandes chances qu'un bash soit déjà installé dans son environnement. Y compris sous Windows. Par exemple si on utilise Git, il est installé par défaut avec Git bash. Dans le cas contraire, on peut toujours installer un émulateur comme MiniGW ou Cygwin.
 

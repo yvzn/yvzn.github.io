@@ -52,7 +52,7 @@ connecter à Github et de fournir les autorisations nécessaires.
 Azure Devops demande un droit d'écriture dans le repository. Cela peut sembler
 intrusif, mais donne en réalité l'opportunité de sauvegarder la configuration
 de déploiement dans un fichier `yaml`, directement versionné au même endroit que votre code.
-Les intérêts sont multiples : répéter le déploiement, le faire évoluer en même temps
+Les intérêts sont multiples&nbsp;: répéter le déploiement, le faire évoluer en même temps
 que votre architecture, etc.
 
 L'écriture de ce fichier `yaml` est largement assistée dans Azure Devops, via des templates
@@ -137,7 +137,7 @@ inputs:
 # Organisation
 
 Pour mieux identifier les différentes tâches, elles peuvent être regroupées en
-sous parties : des `stages`. Par exemple j'ai choisi d'en créer deux : une pour le build
+sous parties&nbsp;: des `stages`. Par exemple j'ai choisi d'en créer deux&nbsp;: une pour le build
 et une pour le déploiement. Dans ce cas particulier, j'ai dû ajouter une tâche pour
 uploader les fichiers dans un répertoire `drop` partagé entre les différents `stages`.
 

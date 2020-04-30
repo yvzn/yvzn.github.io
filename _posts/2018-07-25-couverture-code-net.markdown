@@ -26,7 +26,7 @@ La couverture de code est une mesure intéressante (mais pas infaillible) pour a
 votre code est effectivement testé unitairement. Elle indique
 quelles lignes de code sont exécutées par les tests unitaires
 et dans quelle mesure les différents branchements
-dans le code sont testés : par exemple si toutes les valeurs possibles d'un ```if``` sont testées,
+dans le code sont testés&nbsp;: par exemple si toutes les valeurs possibles d'un ```if``` sont testées,
 si toutes les clauses ```catch``` sont testées, etc.
 
 Et pourtant cette métrique est difficile à obtenir dans Visual Studio (ou VS Code) pour le commun des mortels,
@@ -43,7 +43,7 @@ open source.
 lancer vos tests unitaires, les analyser et produire un ficher
 de couverture de code ```coverage.xml```.
 
-On peut installer cet outil dans son projet de tests avec NuGet :
+On peut installer cet outil dans son projet de tests avec NuGet&nbsp;:
 
 ```powershell
 cd [...]\MonProjet.Tests
@@ -51,7 +51,7 @@ cd [...]\MonProjet.Tests
 dotnet add package AltCover
 ```
 
-Puis lancer les tests unitaires et produire le ficher ```coverage.xml``` :
+Puis lancer les tests unitaires et produire le ficher ```coverage.xml```&nbsp;:
 
 ```powershell
 dotnet test /p:AltCover=true
@@ -66,7 +66,7 @@ Le fichier généré par AltCover est un fichier XML au format OpenCover.
 Diffilement lisible par un être humain, il peut être transformé en pages HTML
 par [ReportGenerator](https://danielpalme.github.io/ReportGenerator/).
 
-On peut installer cet outil, également avec NuGet :
+On peut installer cet outil, également avec NuGet&nbsp;:
 
 ```powershell
 dotnet add package ReportGenerator
@@ -83,7 +83,7 @@ Get-ChildItem $env:USERPROFILE\.nuget\packages\reportgenerator -Recurse -File `
 	| ForEach-Object { $_.FullName }
 ```
 
-Enfin lancer la génération du rapport HTML :
+Enfin lancer la génération du rapport HTML&nbsp;:
 
 ```powershell
 c:\[...]\ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage

@@ -8,7 +8,7 @@ license: CC-BY-SA-4.0
 
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> Adopter une architecture orientée micro-services, a fortiori dans une approche conteneurs ou serverless, c'est accepter que les échanges entre composants ne se passent pas toujours bien – et donc mettre en place les mécanismes adéquats pour éviter une perte d'informations ou fonctionner en mode dégradé.
 
-La librairie open-source [Polly](https://github.com/App-vNext/Polly) permet d'adresser un de ces problèmes de communication : la gestion des erreurs lors d'appels HTTP à des services distants. Que faire en cas d'erreur, faut-il rejouer l'appel ? Combien de fois ? Que retourner à la méthode appelante ?
+La librairie open-source [Polly](https://github.com/App-vNext/Polly) permet d'adresser un de ces problèmes de communication&nbsp;: la gestion des erreurs lors d'appels HTTP à des services distants. Que faire en cas d'erreur, faut-il rejouer l'appel&nbsp;? Combien de fois&nbsp;? Que retourner à la méthode appelante&nbsp;?
 
 Complètement intégrée au système d'injection de dépendances .NET Core, Polly peut être mise en place de manière globale et complètement transparente. Elle permet de rendre son code plus résilient aux fautes.
 

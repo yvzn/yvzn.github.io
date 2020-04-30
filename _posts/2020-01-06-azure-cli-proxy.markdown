@@ -26,7 +26,7 @@ et `HTTPS_PROXY`. Pour utiliser un proxy http sous Windows vous devrez donc
 alimenter ces deux valeurs avec l'URI du proxy à utiliser.
 
 ```
-HTTP_PROXY = "http:// ...user... : ... mot de passe ... @ ... nom du proxy : port"
+HTTP_PROXY = "http:// ...user...&nbsp;: ... mot de passe ... @ ... nom du proxy&nbsp;: port"
 ```
 
 Et oui, il faut mettre ses identifiants en clair dans la variable. Par exemple:
@@ -37,7 +37,7 @@ HTTP_PROXY = "http://user:password@proxy.acme.local:8080"
 
 # Avec CMD
 
-Nous pouvons utiliser la commande `SET` pour définir les variables d'environnement :
+Nous pouvons utiliser la commande `SET` pour définir les variables d'environnement&nbsp;:
 
 ```batch
 set HTTP_PROXY=http://user:password@proxy.acme.local:8080
@@ -94,7 +94,7 @@ Remove-Variable my_credentials
 Remove-Variable my_proxy_string
 ```
 
-Attention cependant : malgré les précautions prises, le mot de passe reste défini
+Attention cependant&nbsp;: malgré les précautions prises, le mot de passe reste défini
 en clair dans les variables d'environnement de la console en cours.
 
 # Conclusion

@@ -16,7 +16,7 @@ Heureusement, l'arrivée du support de .Net Core 2.x dans le nouveau runtime des
 
 <!--more-->
 
-# Uniquement pour les Functions ?
+# Uniquement pour les Functions&nbsp;?
 
 Les outils en question sont dans le package NuGet 
 [`Microsoft.Extensions.DependencyInjection`](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/). Il est fourni par défaut dans le SDK 2.x, mais vous devrez peut-être l'ajouter manuellement.
@@ -33,11 +33,11 @@ La première étape est d'instancer un objet `ServiceCollection` qui va nous per
 var servicesCollection = new ServicesCollection();
 ```
 
-Les plus perspicaces remarqueront que cet objet ressemble étrangement à celui qui est passé en paramètre à la méthode `ConfigureServices(IServiceCollection)` du `Startup.cs` ASP.NET Core. Un indice chez vous : ce n'est pas un hasard 😉.
+Les plus perspicaces remarqueront que cet objet ressemble étrangement à celui qui est passé en paramètre à la méthode `ConfigureServices(IServiceCollection)` du `Startup.cs` ASP.NET Core. Un indice chez vous&nbsp;: ce n'est pas un hasard 😉.
 
 Une fois cet objet instancié, vous pouvez utiliser exactement les mêmes méthodes `AddSingleton`, `AddScoped`, `AddTransient`, etc. que dans ASP.NET Core, pour configurer la résolution de vos dépendances en fonction de la durée de vie souhaitée.
 
-Imaginons par exemple une interface `ICustomerRepository` et l'implémentation correspondante `CustomerRepository`. Voici comment elle pourrait être configurée dans `ServiceCollection` :
+Imaginons par exemple une interface `ICustomerRepository` et l'implémentation correspondante `CustomerRepository`. Voici comment elle pourrait être configurée dans `ServiceCollection`&nbsp;:
 
 ```cs
 servicesCollection.AddSingleton<ICustomerRepository, CustomerRepository>();
@@ -45,7 +45,7 @@ servicesCollection.AddSingleton<ICustomerRepository, CustomerRepository>();
 
 # Instancier avec ServiceProvider 
 
-Imaginons maintenant un `BillingService` qui a besoin d'une instance de `ICustomerRepository`. Pour pouvoir utiliser cette instance, il faut la déclarer dans le constructeur :
+Imaginons maintenant un `BillingService` qui a besoin d'une instance de `ICustomerRepository`. Pour pouvoir utiliser cette instance, il faut la déclarer dans le constructeur&nbsp;:
 
 ```cs
 public class BillingService
@@ -59,7 +59,7 @@ public class BillingService
 
 L'injection de dépendances nous évite d'avoir à instancier manuellement l'implémentation de `ICustomerRepository` à utiliser. C'est le moteur d'injection qui va nous la fournir via le constructeur.
 
-Comment ça 🤔 ?
+Comment ça 🤔&nbsp;?
 
 La `ServiceCollection` créée plus haut fournit une méthode `BuildServiceProvider` qui retourne un provider capable de nous instancier les objets __et__ leurs dépendances de manière automatique.
 
@@ -70,7 +70,7 @@ var billingService = services.GetRequiredService<BillingService>();
 
 L'instance `billingService` est créée dynamiquement et son champ `customerRepository` est valorisé avec une instance de `CustomerRepository` via le constructeur.
 
-Il faut également au préalable déclarer notre `BillingService` dans la `ServiceCollection` :
+Il faut également au préalable déclarer notre `BillingService` dans la `ServiceCollection`&nbsp;:
 
 ```cs
 serviceCollection.AddSingleton<BillingService>();
@@ -78,7 +78,7 @@ serviceCollection.AddSingleton<BillingService>();
 
 # Enrichissement
 
-Et là vous allez me dire : ça commence à faire beaucoup de code pour instancer seulement deux objets.
+Et là vous allez me dire&nbsp;: ça commence à faire beaucoup de code pour instancer seulement deux objets.
 
 C'est pas faux. Mais mon exemple reste relativement trivial.
 
@@ -94,7 +94,7 @@ Un bon vieux code lasagne comme on les aime 🙂🍕.
 
 # Code final
 
-Si on met tout les morceaux ensemble, on obtient ceci :
+Si on met tout les morceaux ensemble, on obtient ceci&nbsp;:
 
 ```cs
 private static IServiceProvider ConfigureServices()
@@ -108,7 +108,7 @@ private static IServiceProvider ConfigureServices()
 }
 ```
 
-Dans notre Azure Function, à l'endroit où on a besoin d'une instance de `BillingService` :
+Dans notre Azure Function, à l'endroit où on a besoin d'une instance de `BillingService`&nbsp;:
 
 ```cs
 private static readonly IServiceProvider services = ConfigureServices();
