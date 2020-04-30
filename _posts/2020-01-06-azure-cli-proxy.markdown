@@ -7,13 +7,14 @@ license: CC-BY-SA-4.0
 series: authenticated-proxy
 ---
 
-
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym>
 Pour se connecter à Azure via la ligne de commande Windows,
 nous pouvons si nécessaire définir le proxy http à utiliser via les variables
 d'environnement `HTTP_PROXY` et `HTTPS_PROXY`.
 
 <!--more-->
+
+# Deux variables d'environnement
 
 Que ce soit avec CMD ou avec Powershell, configurer un proxy http pour la ligne de
 commande sous Windows n'est pas aussi simple que cela devrait. En effet,
@@ -35,7 +36,7 @@ Et oui, il faut mettre ses identifiants en clair dans la variable. Par exemple:
 HTTP_PROXY = "http://user:password@proxy.acme.local:8080"
 ```
 
-# Avec CMD
+## Avec CMD
 
 Nous pouvons utiliser la commande `SET` pour définir les variables d'environnement&nbsp;:
 
@@ -47,7 +48,7 @@ az login
 ...
 ```
 
-# Avec Powershell
+## Avec Powershell
 
 Nous pourrions utiliser l'équivalent de `SET`, mais nous pouvons également 
 essayer d'être plus malins.

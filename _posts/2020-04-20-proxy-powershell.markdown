@@ -12,6 +12,8 @@ La plupart des commandes Powershell comme <a href="https://docs.microsoft.com/en
 
 <!--more-->
 
+# Le paramètre `-Proxy`
+
 Dans ce second article sur la fastidieuse configuration des proxy http  pour la ligne de commande sous Windows, j'aborde quelques solutions pour les _commandlets_ Powershell.
 
 Il n'est, là encore, pas possible de passer de manière transparente par le proxy défini au niveau du système d'exploitation. Mais on peut néanmoins récupérer son paramétrage en faisant un appel à&nbsp;:
@@ -49,7 +51,7 @@ Invoke-WebRequest "https://swapi.dev/api/starships/9/" -Proxy $proxy -ProxyCrede
 # Conclusion
 
 Le script peut être ajouté à `$PROFILE` (`notepad $PROFILE`) et/ou défini dans 
-une fonction Powershell personnalisée:
+une fonction Powershell personnalisée&nbsp;:
 
 ```powershell
 function Get-DefaultSystemProxy 
