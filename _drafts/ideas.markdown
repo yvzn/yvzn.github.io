@@ -1,9 +1,12 @@
-# En cours
 
 # Prévu
-- Un an avec React
 - React et Angular
 
 # Possible
-- RGPD sous-traitant
+- Veille technique
+- Support IE
+- .NET Background Services
+- Migrations Azure
+- Un an avec React
 - .NET Authz / Authn
+- RGPD sous-traitant
