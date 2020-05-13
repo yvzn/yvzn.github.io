@@ -1,5 +1,5 @@
 <nav class="series">
-  <h4>Cet article fait partie de la série <em>{{ site.data.series | where: 'id', page.series | map: 'title' }}</em>&nbsp;:</h4>
+  <h4>Cet article fait partie de la série <strong>{{ site.data.series | where: 'id', page.series | map: 'title' }}</strong>&nbsp;:</h4>
   <ol>
     {% assign series-posts = site.posts | reverse | where: 'series', page.series %}
     {% for post in series-posts %}
