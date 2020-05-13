@@ -48,3 +48,5 @@ Le dernier outil présenté, [pyLDAvis](https://github.com/bmabey/pyLDAvis), per
 Par manque de temps, nous n'avons pas pu aborder le second sujet qui consistait à suggérer algorithmiquement le nom d'une méthode à partir de son corps. Pour résumer, les animateurs nous ont indiqué utiliser des modèles de traduction automatisée (comme [OpenNMT](https://opennmt.net/) et [seq2seq](https://google.github.io/seq2seq/)) pour aborder cette problématique, et nous ont redirigé vers le [code source du codelab](https://github.com/mloncode/devfest2019-workshop).
 
 Cet atelier m'a donc permis de m'initier au _MLonCode_ (Machine Learning on source code) dont l'approche inspirée du _Natural Language Processing_ permet d'extraire des métriques de sa codebase. Il a repris méthodiquement les principales étapes d'un projet de data science, ce qui permet de constater que la majorité du travail consiste à collecter la donnée (le code source) et à la formatter / à la nettoyer pour la rendre exploitable. Il a également mis l'accent sur le fait qu'il existe de nombreux outils pour se faciliter la tâche et qu'il ne faut pas hésiter à les utiliser.
+
+{% include series.html  %}

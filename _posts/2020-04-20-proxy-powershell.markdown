@@ -12,7 +12,7 @@ La plupart des commandes Powershell comme <a href="https://docs.microsoft.com/en
 
 <!--more-->
 
-# Le paramètre `-Proxy`
+# Le paramètre -Proxy
 
 Dans ce second article sur la fastidieuse configuration des proxy http  pour la ligne de commande sous Windows, j'aborde quelques solutions pour les _commandlets_ Powershell.
 
