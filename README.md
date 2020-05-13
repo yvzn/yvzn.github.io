@@ -12,7 +12,7 @@ et est hébergé sur Github Pages.
 
 Pour lancer le site en local après avoir cloné le dépôt git, vous aurez besoin de Ruby et de [Jekyll](https://jekyllrb.com/) (toutes les instructions d'installation sont dans ce lien)
 
-```bash
+```powershell
 git clone https://github.com/yvzn/yvzn.github.io.git
 bundle exec jekyll serve
 ```
@@ -28,3 +28,27 @@ Les textes et articles sont distribués sous licence
 Les composants logiciels sont distribués sous licence Apache (voir le fichier LICENSE)
 
 L'ensemble du code source est disponible sur [Github](https://github.com/yvzn/yvzn.github.io).
+
+## Avec Docker
+
+Pour lancer le site en local sans installer Ruby, vous pouvez utiliser Docker:
+
+```powershell
+docker run --rm `
+  -v ${PWD}:/srv/jekyll `
+  -p 4000:4000 `
+  -it jekyll/jekyll `
+  bundle exec jekyll serve --watch --drafts --host 0.0.0.0
+```
+
+Puis ouvrir http://localhost:4000/ dans un navigateur.
+
+Pour mettre à jour les dépendances :
+
+```powershell
+docker run --rm `
+  -v ${PWD}:/srv/jekyll `
+  -it jekyll/jekyll `
+  bundle update
+```
+
