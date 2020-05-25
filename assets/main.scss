@@ -2,7 +2,8 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minima";
+@import 'minima';
+@import 'trac';
 
 /* https://coolors.co/ef6461-e4b363-2f4858-fbfbfb-201a23 */
 
@@ -21,7 +22,7 @@
     --active-links-color: #d62839;
     --meta-color: #d62839;
     --footer-color: #685e62;
-    --highlight-color: #fbfbfb;
+    --highlight-color: #fff;
     --wrapper-color: #fff;
     
     --large-title-size: 2rem;
@@ -167,11 +168,28 @@ p.site-title {
     white-space: nowrap;
 }
 
+
 .highlighter-rouge .highlight {
     background-color: var(--highlight-color)
 }
 pre, code, kbd {
     background-color: var(--highlight-color)
+}
+
+
+.series {
+    h3 {
+        margin-top: var(--space-1x);
+    }
+
+    h5 {
+        margin-bottom: var(--space-1x);
+        font-size: .7rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: var(--meta-color);
+        font-family: 'Proza Libre', sans-serif;
+    }
 }
 
 @media only screen and (max-width: 600px) {
