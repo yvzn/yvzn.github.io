@@ -18,11 +18,10 @@ author: Apprentissage non supervisé
 email: mail@ludeo.net
 description: >- # this means to ignore newlines until "baseurl:"
   Blog technique de Yvan Razafindramanana, lead tech
-  .Net, Angular et Azure.
+  .NET, Azure et Typescript.
   Les articles sont publiés sous licence CC-BY-SA-4.0
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.ludeo.net" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: yr424
 github_username: yvzn
 linkedin_username: yvanrazafindramanana
 
