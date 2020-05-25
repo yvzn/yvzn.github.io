@@ -3,10 +3,12 @@
 - React et Angular
 
 # Possible
-- Veille technique
-- Support IE
-- .NET Background Services
 - Migrations Azure
-- Un an avec React
+- .NET Background Services
+- Ecrire des TU ne prend pas plus de temps
+- KISS
+- Organiser sa veille technique
+- Support IE ?
 - .NET Authz / Authn
+- Frameworks et stacks
 - RGPD sous-traitant
