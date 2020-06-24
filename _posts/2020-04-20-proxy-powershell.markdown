@@ -28,7 +28,7 @@ Pour récupérer la bonne instance de proxy, on peut appeler la méthode `GetPro
 
 ```powershell
 $example_address_to_query = 'https://swapi.dev/'
-$proxy = ([System.Net.WebRequest]::GetSystemWebproxy()).GetProxy()
+$proxy = ([System.Net.WebRequest]::GetSystemWebproxy()).GetProxy($example_address_to_query)
 ```
 
 On peut se servir de cet objet `$proxy` grâce aux paramètres `-Proxy` et `-ProxyUseDefaultCredentials`, qui sont acceptés par la plupart des commandes pouvant faire des appels vers le réseau&nbsp;:
@@ -57,7 +57,7 @@ une fonction Powershell personnalisée&nbsp;:
 function Get-DefaultSystemProxy 
 {
   param($example_address_to_query = 'https://www.google.fr')
-  $proxy = ([System.Net.WebRequest]::GetSystemWebproxy()).GetProxy()
+  $proxy = ([System.Net.WebRequest]::GetSystemWebproxy()).GetProxy($example_address_to_query)
 }
 
 $default_proxy = Get-DefaultSystemProxy
