@@ -77,7 +77,7 @@ automatique.
 
 J'ai donc installé Visual Studio Community Edition
 (gratuit, sous conditions) Vous pouvez également essayer 
-Rider de JetBrains, si vous arrivez à négocier une licence 🤑.
+Rider de JetBrains, mais il faut trouver une licence 🤑.
 
 ## Activation de CORS
 
@@ -199,9 +199,8 @@ avec laquelle on peut ajouter des outils de sécurisation ou
 d'aide au développement, comme CORS ou Swagger, 
 avec un minimum de code.
 
-C'est l'avantage d'arriver après tout le monde 😄&nbsp;: proposer un
-framework moderne avec des technos éprouvées,
-adaptable rapidement avec une configuration minimale.
+C'est l'avantage d'un framework moderne (il a été intégralement réécrit récemment),
+avec des technos éprouvées, vadaptable rapidement avec une configuration minimale.
 
 Le framework
 est suffisament bien documenté, sauf lorsqu'on veut faire des

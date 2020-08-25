@@ -10,7 +10,7 @@ license: CC-BY-SA-4.0
 
 <acronym title="En résumé... (Too long; Didn't Read)">TL;DR</acronym> La philosophie fondamentalement statique et procédurale des Azure Functions fait qu'il peut être contre-intuitif d'utiliser des concepts avancés de la programmation objet, tels que l'injection de dépendances.
 
-Cependant plusieurs cas d'utilisation peuvent justifier le recours à ces concepts, pour simplifier l'écriture.
+Cependant plusieurs cas d'utilisation peuvent justifier le recours à ces concepts, pour simplifier l'écriture, les tests et la maintenance.
 
 Heureusement, l'arrivée du support de .Net Core 2.x dans le nouveau runtime des Azure Functions (C#) rend possible l'utilisation des outils du le framework – et donc en particulier l'injection de dépendances.
 
@@ -33,7 +33,7 @@ La première étape est d'instancer un objet `ServiceCollection` qui va nous per
 var servicesCollection = new ServicesCollection();
 ```
 
-Les plus perspicaces remarqueront que cet objet ressemble étrangement à celui qui est passé en paramètre à la méthode `ConfigureServices(IServiceCollection)` du `Startup.cs` ASP.NET Core. Un indice chez vous&nbsp;: ce n'est pas un hasard 😉.
+Cet objet ressemble étrangement à celui qui est passé en paramètre à la méthode `ConfigureServices(IServiceCollection)` du `Startup.cs` ASP.NET Core. Ce n'est pas un hasard 😉.
 
 Une fois cet objet instancié, vous pouvez utiliser exactement les mêmes méthodes `AddSingleton`, `AddScoped`, `AddTransient`, etc. que dans ASP.NET Core, pour configurer la résolution de vos dépendances en fonction de la durée de vie souhaitée.
 
@@ -78,9 +78,7 @@ serviceCollection.AddSingleton<BillingService>();
 
 # Enrichissement
 
-Et là vous allez me dire&nbsp;: ça commence à faire beaucoup de code pour instancer seulement deux objets.
-
-C'est pas faux. Mais mon exemple reste relativement trivial.
+Bon&nbsp;: ça commence à faire beaucoup de code pour instancer seulement deux objets. Mais mon exemple reste relativement trivial.
 
 Imaginez que votre `BillingService` ait aussi besoin d'un `IOrderRepository` en plus de `ICustomerRepository`. Imaginez en plus que cet `IOrderRepository` ait lui aussi besoin de `ICustomerRepository`.
 
