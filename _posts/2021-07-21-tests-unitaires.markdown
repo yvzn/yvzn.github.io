@@ -36,7 +36,7 @@ Ou peut-être que composant en question fait trop de choses. Dans ce cas une bon
 
 Enfin, il arrive aussi qu'on essaie de tester des choses qu'on ne devrait pas. Faut-il tester unitairement le comportement du framework de développement&nbsp;? Faut-il tester une couche de présentation, qui fait uniquement passe plat vers les couches métier&nbsp;? 
 
-Tester efficacement implique aussi de faire confiance à sa plateforme (qui est probablement déjà testée par les développeurs de cette plateforme) et d'éviter les tests qui servent uniquement à se rassurer par rapport au comportement du framework.
+Tester efficacement implique aussi de faire confiance à la plateforme (qui est probablement déjà testée par ses propres développeurs) et d'éviter les tests qui servent uniquement à se rassurer par rapport au comportement du framework.
 
 # Conclusion
 
