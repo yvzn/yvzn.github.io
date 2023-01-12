@@ -64,6 +64,13 @@
         animation: draw 3s linear forwards;
     }
 
+    @media (prefers-reduced-motion: reduce) {
+        .logo {
+            stroke-dasharray: none;
+            animation: none;
+        }
+    }
+
     @keyframes draw {
         to {
             stroke-dashoffset: 0;
