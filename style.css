@@ -1,6 +1,89 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hover (&:hover);
+
+@theme {
+	--breakpoint-xs: 25rem;
+
+	/* https://coolors.co/8ecae6-219ebc-023047-ffb703-fb8500 */
+	/* https://www.tints.dev/skyblue/8ecae6 */
+
+	--color-skyblue-50: hsl(198 62.5% 96.9%);
+	--color-skyblue-100: hsl(198.7 61.5% 94.9%);
+	--color-skyblue-200: hsl(198.3 64.3% 89%);
+	--color-skyblue-300: hsl(198.5 63.4% 83.9%);
+	--color-skyblue-400: hsl(199.2 64.3% 78%);
+	--color-skyblue-500: hsl(199.1 63.8% 72.9%);
+	--color-skyblue-600: hsl(199 63.6% 58%);
+	--color-skyblue-700: hsl(199.3 63.6% 44.1%);
+	--color-skyblue-750: hsl(199, 64%, 36%);
+	--color-skyblue-800: hsl(199.1 63.5% 29%);
+	--color-skyblue-900: hsl(199.6 63.6% 15.1%);
+	--color-skyblue-950: hsl(198.3 65.7% 6.9%);
+	--color-skyblue: var(--color-skyblue-500);
+
+	--color-bluegreen-50: #e5f6fa;
+	--color-bluegreen-100: #cfeff7;
+	--color-bluegreen-200: #9bdded;
+	--color-bluegreen-300: #6ccde5;
+	--color-bluegreen-400: #3cbddd;
+	--color-bluegreen-500: #219ebc;
+	--color-bluegreen-600: #1b7f98;
+	--color-bluegreen-700: #145e71;
+	--color-bluegreen-800: #0d3e4a;
+	--color-bluegreen-900: #072127;
+	--color-bluegreen-950: #030e11;
+	--color-bluegreen: var(--color-bluegreen-500);
+
+	--color-prussianblue-50: #d2effe;
+	--color-prussianblue-100: #abe1fd;
+	--color-prussianblue-200: #56c4fa;
+	--color-prussianblue-300: #07a4f3;
+	--color-prussianblue-400: #04689a;
+	--color-prussianblue-500: #023047;
+	--color-prussianblue-600: #022537;
+	--color-prussianblue-700: #011e2d;
+	--color-prussianblue-800: #01141e;
+	--color-prussianblue-900: #000a0f;
+	--color-prussianblue-950: #000305;
+	--color-prussianblue: var(--color-prussianblue-500);
+
+	--color-selectiveyellow-50: #fff8e5;
+	--color-selectiveyellow-100: #fff1cc;
+	--color-selectiveyellow-200: #ffe299;
+	--color-selectiveyellow-300: #ffd466;
+	--color-selectiveyellow-400: #ffc533;
+	--color-selectiveyellow-500: #ffb703;
+	--color-selectiveyellow-600: #cc9200;
+	--color-selectiveyellow-700: #996e00;
+	--color-selectiveyellow-800: #664900;
+	--color-selectiveyellow-900: #332500;
+	--color-selectiveyellow-950: #191200;
+	--color-selectiveyellow: var(--color-selectiveyellow-500);
+
+	--color-utorange-50: #fff3e5;
+	--color-utorange-100: #ffe7cc;
+	--color-utorange-200: #ffcf99;
+	--color-utorange-300: #ffb866;
+	--color-utorange-400: #ff9d2e;
+	--color-utorange-500: #fb8500;
+	--color-utorange-600: #c76a00;
+	--color-utorange-700: #995200;
+	--color-utorange-800: #663600;
+	--color-utorange-900: #331b00;
+	--color-utorange-950: #190e00;
+	--color-utorange: var(--color-utorange-500);
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+section :where(h1) {
+	/* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#specifying_a_uniform_font_size_for_h1 */
+	margin-block: 0;
+}
 
 #logo {
   stroke-dasharray: 200;
