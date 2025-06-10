@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="scroll-smooth scroll-py-16">
+
+<head>
+	{% include "partials/head.njk" %}
+</head>
+
+<body class="bg-white text-prussianblue dark:bg-bluegreen-800 dark:text-white">
+	{{ content | safe }}
+
+	{% include "partials/footer.njk" %}
+
+	{% include "partials/scripting.njk" %}
+</body>
+
+</html>

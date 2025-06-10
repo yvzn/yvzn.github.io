@@ -1,11 +1,9 @@
 {
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"emmet.includeLanguages": {
+		"njk": "html",
+		"nunjucks": "html"
 	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"files.associations": {
+		"*.njk": "html"
 	}
 }
